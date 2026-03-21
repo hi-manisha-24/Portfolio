@@ -544,205 +544,256 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
-    <div class="projects-grid">
-      <div class="section-label fade-in">Case studies</div>
-      <h2 class="fade-in">My projects</h2>
-      <p class="section-sub fade-in">Real problems, structured thinking, meaningful outcomes.</p>
+<section id="projects">
+  <div class="projects-grid">
+    <div class="section-label fade-in">Case studies</div>
+    <h2 class="fade-in">My projects</h2>
+    <p class="section-sub fade-in">Real problems, structured thinking, meaningful outcomes.</p>
 
-      <div class="project-card fade-in">
-        <div class="project-header">
-          <div class="project-title">Crafto</div>
-          <span class="project-badge">Product Case Study</span>
-        </div>
-        <p class="project-desc">
-          Crafto is a platform designed to empower independent creators and small artisan businesses to discover, connect, and grow. Recognizing that skilled crafters often struggle with visibility and monetization, I led end-to-end product discovery to define what a creator-first marketplace could look like — from user pain points to core feature prioritization.
-        </p>
-        <ul class="project-highlights">
-          <li>Conducted user interviews with 15+ independent creators to uncover core friction points around discovery and pricing</li>
-          <li>Synthesized research into a prioritized feature set using the RICE framework, balancing reach, impact, and effort</li>
-          <li>Defined the MVP scope and built a user story map to align stakeholders on phased delivery</li>
-          <li>Designed low-fidelity wireframes in Figma to validate the core user journey before any development began</li>
-        </ul>
-        <div class="project-tech">
-          <span class="tech-tag">User Research</span>
-          <span class="tech-tag">RICE Prioritization</span>
-          <span class="tech-tag">Figma</span>
-          <span class="tech-tag">Story Mapping</span>
-          <span class="tech-tag">PRD Writing</span>
-        </div>
+    <style>
+      .project-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 24px; transition: transform 0.2s, border-color 0.2s; }
+      .project-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+      .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+      .project-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; color: var(--text); }
+      .project-badge { background: rgba(140,180,255,0.1); color: var(--accent); border: 1px solid var(--accent); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; white-space: nowrap; }
+      .project-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px; }
+      .project-highlights { color: var(--muted); font-size: 0.9rem; padding-left: 20px; margin-bottom: 16px; }
+      .project-highlights li { margin-bottom: 6px; }
+      .project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+      .tech-tag { background: var(--bg2); color: var(--muted); border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; }
+      .project-links { display: flex; flex-wrap: wrap; gap: 10px; }
+      .proj-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 500; text-decoration: none; transition: all 0.2s; cursor: pointer; }
+      .proj-btn-pdf { background: rgba(255,100,100,0.1); color: #ff6464; border: 1px solid rgba(255,100,100,0.3); }
+      .proj-btn-pdf:hover { background: rgba(255,100,100,0.2); }
+      .proj-btn-loom { background: rgba(155,100,255,0.1); color: #9b7fe8; border: 1px solid rgba(155,100,255,0.3); }
+      .proj-btn-loom:hover { background: rgba(155,100,255,0.2); }
+      .proj-btn-proto { background: rgba(100,200,100,0.1); color: #6cc47a; border: 1px solid rgba(100,200,100,0.3); }
+      .proj-btn-proto:hover { background: rgba(100,200,100,0.2); }
+      .proj-btn-survey { background: rgba(255,180,50,0.1); color: #f5c97a; border: 1px solid rgba(255,180,50,0.3); }
+      .proj-btn-survey:hover { background: rgba(255,180,50,0.2); }
+    </style>
+
+    <!-- Project 1: Crafto -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">⭐ Crafto – Premium Conversion Strategy</div>
+        <span class="project-badge">Final Project</span>
+      </div>
+      <p class="project-desc">End-to-end PM case study for Crafto, a content creation app for Hindi-speaking Tier 2/3 India. Identified root causes of under 5% premium conversion — pricing mismatch, auto-pay distrust, weak premium value. Proposed ₹49 plan, 7-day trial, manual payment & AI templates.</p>
+      <ul class="project-highlights">
+        <li>Surveyed 54 users — 62% found ₹99/month expensive, 57% prefer below ₹49</li>
+        <li>RICE prioritization: ₹49 pricing ranked #1 for conversion impact</li>
+        <li>Built working prototype on Lovable + GTM strategy & OKRs</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">AARRR Funnel</span>
+        <span class="tech-tag">RICE Framework</span>
+        <span class="tech-tag">User Research</span>
+        <span class="tech-tag">PRD Writing</span>
+        <span class="tech-tag">GTM Strategy</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/03/20/CHOVVVS6OYKQ7GWZ.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Case Study PDF</a>
+        <a href="https://crafto-pm-launchpad-manishaagarwal.lovable.app/" target="_blank" class="proj-btn proj-btn-proto">🚀 Live Prototype</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXRtwTaH_jx98BGkhlEHY68zhIWDf7SYUOy_5eJ3WNfc1GGw/viewform" target="_blank" class="proj-btn proj-btn-survey">📊 Survey</a>
       </div>
     </div>
-    <!-- Project 2 -->
-<div class="project-card fade-in">
-  <div class="project-header">
-    <div class="project-title">Uber Reserve – On-Time Guarantee</div>
-    <span class="project-badge">Product Case Study</span>
-  </div>
-  <p class="project-desc">Analyzed low adoption of Uber Reserve among urban professionals using JTBD & First Principles. Identified core gap: users pay for assurance but get only an attempt. Proposed a Guaranteed Reliability System with driver assignment, price lock & delay credits.</p>
-  <ul class="project-highlights">
-    <li>Applied Jobs-To-Be-Done & First Principles frameworks</li>
-    <li>Identified trust gap between user expectation and product delivery</li>
-    <li>Proposed On-Time Guarantee with backup dispatch & price lock</li>
-  </ul>
-  <div class="project-tech">
-    <span class="tech-tag">JTBD</span>
-    <span class="tech-tag">First Principles</span>
-    <span class="tech-tag">UX Research</span>
-    <span class="tech-tag">Product Strategy</span>
-  </div>
-</div>
 
-<!-- Project 3 -->
-<div class="project-card fade-in">
-  <div class="project-header">
-    <div class="project-title">Zepto – Pet Salon on Wheels</div>
-    <span class="project-badge">Product Strategy</span>
-  </div>
-  <p class="project-desc">Evaluated Zepto's expansion into pet care via mobile grooming trucks. Conducted market research, user interviews & competitor analysis. Proposed a doorstep grooming model with Zepto app integration and pet product cross-sell.</p>
-  <ul class="project-highlights">
-    <li>Market sizing: India pet care market ₹2.1T by 2032</li>
-    <li>Survey insights: 90% groom at home, 70% open to switching</li>
-    <li>Proposed tiered pricing: ₹499 Basic to ₹999 Deluxe</li>
-  </ul>
-  <div class="project-tech">
-    <span class="tech-tag">Market Research</span>
-    <span class="tech-tag">User Interviews</span>
-    <span class="tech-tag">Competitor Analysis</span>
-    <span class="tech-tag">GTM Strategy</span>
-  </div>
-</div>
+    <!-- Project 2: Uber Reserve -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">Uber Reserve – On-Time Guarantee</div>
+        <span class="project-badge">Product Case Study</span>
+      </div>
+      <p class="project-desc">Analyzed low adoption of Uber Reserve among urban professionals using JTBD & First Principles thinking. Identified core gap: users pay for assurance but get only an attempt. Proposed Guaranteed Reliability System with driver assignment, price lock & delay credits.</p>
+      <ul class="project-highlights">
+        <li>Applied Jobs-To-Be-Done & First Principles frameworks</li>
+        <li>Identified trust gap between user expectation and product delivery</li>
+        <li>Proposed backup dispatch, weather credits (₹150–200) & smart cancellation</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">JTBD</span>
+        <span class="tech-tag">First Principles</span>
+        <span class="tech-tag">UX Research</span>
+        <span class="tech-tag">Product Strategy</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2025/11/28/EEIUWTIQ5QPUKLFW.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Case Study PDF</a>
+        <a href="https://www.loom.com/share/b11ed461c50b4c11a700234cb50fb19a" target="_blank" class="proj-btn proj-btn-loom">🎬 Loom Video</a>
+      </div>
+    </div>
 
-<!-- Project 4 -->
-<div class="project-card fade-in">
-  <div class="project-header">
-    <div class="project-title">Zepto – AOV Optimization</div>
-    <span class="project-badge">Product Management</span>
-  </div>
-  <p class="project-desc">Group PM study to increase Zepto's Average Order Value. Ran user surveys, built personas, identified blockers like hidden delivery fees and irrelevant recommendations. Prioritized 6 solutions using RICE framework.</p>
-  <ul class="project-highlights">
-    <li>75% users struggled to compare prices — led to cart abandonment</li>
-    <li>Proposed Flash Deals display, Free Delivery Tracker & AI Recommendations</li>
-    <li>RICE prioritization: Flash Deals scored highest at 171.56</li>
-  </ul>
-  <div class="project-tech">
-    <span class="tech-tag">RICE Framework</span>
-    <span class="tech-tag">User Research</span>
-    <span class="tech-tag">Persona Creation</span>
-    <span class="tech-tag">Ideation</span>
-  </div>
-</div>
+    <!-- Project 3: Zepto Pet Salon -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">Zepto – Pet Salon on Wheels</div>
+        <span class="project-badge">Product Strategy</span>
+      </div>
+      <p class="project-desc">Evaluated Zepto's expansion into pet care via mobile grooming trucks visiting residential societies. Conducted market research, user surveys & competitor analysis. Proposed doorstep grooming model with Zepto app integration and pet product cross-sell.</p>
+      <ul class="project-highlights">
+        <li>India pet care market: ₹2.1T by 2032 — 90% currently groom at home</li>
+        <li>Survey: 70%+ open to switching with 50% discount offer</li>
+        <li>Proposed tiered pricing: ₹499 Basic → ₹999 Deluxe + subscriptions</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">Market Research</span>
+        <span class="tech-tag">User Interviews</span>
+        <span class="tech-tag">Competitor Analysis</span>
+        <span class="tech-tag">GTM Strategy</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2025/12/05/ZPNC7HLICXE8NK3D.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Case Study PDF</a>
+        <a href="https://www.loom.com/share/2c93b7bb85ac42509c45f2d7e76f81bc" target="_blank" class="proj-btn proj-btn-loom">🎬 Loom Video</a>
+      </div>
+    </div>
 
-<!-- Project 5 -->
-<div class="project-card fade-in">
-  <div class="project-header">
-    <div class="project-title">Meal Minder – AI Meal Planning App</div>
-    <span class="project-badge">Product Design</span>
-  </div>
-  <p class="project-desc">Designed an AI-powered meal planning tool for busy urban professionals. Surveyed 20 users, mapped key flows, built a working prototype on Lovable. Features pantry-first approach, time-based filters & reusable meal templates.</p>
-  <ul class="project-highlights">
-    <li>70% users don't plan meals; 60% order out due to lack of planning</li>
-    <li>Built working prototype: cook-smart-plan-easy.lovable.app</li>
-    <li>Two-stage hybrid recommendation engine with 200ms latency</li>
-  </ul>
-  <div class="project-tech">
-    <span class="tech-tag">Prototyping</span>
-    <span class="tech-tag">User Research</span>
-    <span class="tech-tag">Lovable</span>
-    <span class="tech-tag">AI Product Design</span>
-  </div>
-</div>
+    <!-- Project 4: Zepto AOV -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">Zepto – AOV Optimization</div>
+        <span class="project-badge">Product Management</span>
+      </div>
+      <p class="project-desc">Group PM study to increase Zepto's Average Order Value. Ran user surveys, built 3 personas, identified blockers like hidden delivery fees and irrelevant recommendations. Prioritized 6 solutions using RICE framework.</p>
+      <ul class="project-highlights">
+        <li>75% users struggled to compare prices — key driver of cart abandonment</li>
+        <li>Proposed Flash Deals display, Free Delivery Tracker & AI Recommendations</li>
+        <li>RICE: Flash Deals scored highest at 171.56</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">RICE Framework</span>
+        <span class="tech-tag">User Research</span>
+        <span class="tech-tag">Persona Creation</span>
+        <span class="tech-tag">Ideation</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2025/12/12/TQYWRSGK0GUETMBA.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Case Study PDF</a>
+        <a href="https://www.loom.com/share/73d5149f693444e8b34aec4c427fadd3" target="_blank" class="proj-btn proj-btn-loom">🎬 Loom Video</a>
+      </div>
+    </div>
 
-<!-- Project 6 -->
-<div class="project-card fade-in">
-  <div class="project-header">
-    <div class="project-title">VitaFit – FitBuddy Circles & Streak Engine</div>
-    <span class="project-badge">PRD</span>
-  </div>
-  <p class="project-desc">Wrote a full PRD for two retention features for VitaFit fitness platform: FitBuddy Circles (micro-communities) and Streak & Challenge Engine (gamification). Projected 30-day retention from 60% to 80%.</p>
-  <ul class="project-highlights">
-    <li>Defined user personas, user stories, KPIs & guardrails</li>
-    <li>FitBuddy: AI-matched groups of 3-5 with shared calendars & instructor spotlights</li>
-    <li>Streak Engine: Daily streaks, freeze feature, leaderboards & badges</li>
-  </ul>
-  <div class="project-tech">
-    <span class="tech-tag">PRD Writing</span>
-    <span class="tech-tag">Gamification</span>
-    <span class="tech-tag">Retention Strategy</span>
-    <span class="tech-tag">OKRs</span>
-  </div>
-</div>
+    <!-- Project 5: Meal Minder -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">Meal Minder – AI Meal Planning App</div>
+        <span class="project-badge">Product Design</span>
+      </div>
+      <p class="project-desc">Designed an AI-powered meal planning tool for busy urban professionals. Surveyed 20 users, mapped key user flows, and built a working prototype. Features pantry-first approach, time-based filters (15/30/45 min) & reusable meal templates.</p>
+      <ul class="project-highlights">
+        <li>70% users don't plan meals; 60% order out due to lack of planning</li>
+        <li>Identified gaps: no time filters, poor pantry integration, no reusable plans</li>
+        <li>Built working prototype on Lovable</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">Prototyping</span>
+        <span class="tech-tag">User Research</span>
+        <span class="tech-tag">Lovable</span>
+        <span class="tech-tag">AI Product Design</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2025/12/19/QWYTZI1I7XSIA6MN.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Case Study PDF</a>
+        <a href="https://cook-smart-plan-easy.lovable.app/" target="_blank" class="proj-btn proj-btn-proto">🚀 Live Prototype</a>
+        <a href="https://www.loom.com/share/e0a86b4f3dbb4d0a81fd2ff535ad85d5" target="_blank" class="proj-btn proj-btn-loom">🎬 Loom Video</a>
+      </div>
+    </div>
 
-<!-- Project 7 -->
-<div class="project-card fade-in">
-  <div class="project-header">
-    <div class="project-title">Zomato – Retention Strategy CY2026</div>
-    <span class="project-badge">Product Strategy</span>
-  </div>
-  <p class="project-desc">Defined OKRs, funnel analysis & cohort strategy for Zomato Tier-1 cities. Identified 82% Day-30 churn as core problem. Built 3-phase roadmap to grow Weekly Active Orderers from 2.2M to 4M.</p>
-  <ul class="project-highlights">
-    <li>North Star: Weekly Active Orderers (WAO) — target 4M by Dec 2026</li>
-    <li>Funnel fix: Personalized feed, upfront cost display, reorder widget</li>
-    <li>Cohort strategy: Move users up one cohort every 90 days</li>
-  </ul>
-  <div class="project-tech">
-    <span class="tech-tag">OKRs</span>
-    <span class="tech-tag">Funnel Analysis</span>
-    <span class="tech-tag">Cohort Analysis</span>
-    <span class="tech-tag">Retention</span>
-  </div>
-</div>
+    <!-- Project 6: VitaFit -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">VitaFit – FitBuddy Circles & Streak Engine</div>
+        <span class="project-badge">PRD</span>
+      </div>
+      <p class="project-desc">Wrote a full PRD for two retention features for VitaFit fitness platform. FitBuddy Circles: AI-matched micro-communities of 3-5 users. Streak & Challenge Engine: gamified daily engagement. Projected 30-day retention lift from 60% to 80%.</p>
+      <ul class="project-highlights">
+        <li>Defined user personas, user stories, success KPIs & guardrails</li>
+        <li>FitBuddy: AI matching, shared calendar & exclusive instructor spotlights</li>
+        <li>Streak Engine: flame counter, freeze feature, leaderboards & milestone badges</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">PRD Writing</span>
+        <span class="tech-tag">Gamification</span>
+        <span class="tech-tag">Retention Strategy</span>
+        <span class="tech-tag">OKRs</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/01/03/OEV4H7V7ASR3F5UI.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Presentation PDF</a>
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/01/03/ONXLAW8XDF489CU4.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 PRD Document</a>
+      </div>
+    </div>
 
-<!-- Project 8 -->
-<div class="project-card fade-in">
-  <div class="project-header">
-    <div class="project-title">EdTech – Course Recommendation System</div>
-    <span class="project-badge">System Design</span>
-  </div>
-  <p class="project-desc">Designed a personalized learning recommendation system for an online education platform. Defined PRD for 3 personas (Learners, Instructors, Admins). Proposed two-stage hybrid ML architecture with 200ms latency target.</p>
-  <ul class="project-highlights">
-    <li>Target: 25% engagement lift, 30% completion improvement</li>
-    <li>Two-stage engine: Candidate generation + Neural ranking</li>
-    <li>60-70% cost reduction via optimized CPU/GPU resource allocation</li>
-  </ul>
-  <div class="project-tech">
-    <span class="tech-tag">PRD</span>
-    <span class="tech-tag">System Design</span>
-    <span class="tech-tag">ML Architecture</span>
-    <span class="tech-tag">Personalization</span>
-  </div>
-</div>
+    <!-- Project 7: Zomato -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">Zomato – Retention Strategy CY2026</div>
+        <span class="project-badge">Product Strategy</span>
+      </div>
+      <p class="project-desc">Defined OKRs, funnel & cohort analysis for Zomato Tier-1 cities. Core insight: Zomato acquires 1M users/month but loses 82% by Day 30. Built 3-phase roadmap to grow Weekly Active Orderers from 2.2M to 4M by Dec 2026.</p>
+      <ul class="project-highlights">
+        <li>North Star Metric: Weekly Active Orderers — target 4M (+82%)</li>
+        <li>3-phase roadmap: Stop bleeding → Build habits → Monetize loyalty</li>
+        <li>Cohort strategy: Move users up one cohort every 90 days = 3x revenue</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">OKRs</span>
+        <span class="tech-tag">Funnel Analysis</span>
+        <span class="tech-tag">Cohort Analysis</span>
+        <span class="tech-tag">Retention</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/01/09/8ZP0ZLVL59OH94DI.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Case Study PDF</a>
+      </div>
+    </div>
 
-<!-- Project 9 -->
-<div class="project-card fade-in">
-  <div class="project-header">
-    <div class="project-title">Twitter/X – AARRR Growth Strategy</div>
-    <span class="project-badge">Growth PM</span>
-  </div>
-  <p class="project-desc">Mapped Twitter/X's full AARRR funnel and identified 60% activation drop-off as core problem. Proposed 3 sequenced epics: Shadow Feeds, Quality Signal Boost & Signal Marketplace. Projected WAU growth from 245M to 300M.</p>
-  <ul class="project-highlights">
-    <li>Root cause: "Empty Feed Syndrome" — X requires manual feed building</li>
-    <li>Epic 1: Shadow Feeds — AI topic clusters before following anyone</li>
-    <li>RICE prioritization: First Day Magic scored #1 with highest ROI</li>
-  </ul>
-  <div class="project-tech">
-    <span class="tech-tag">AARRR Funnel</span>
-    <span class="tech-tag">Growth Strategy</span>
-    <span class="tech-tag">RICE Framework</span>
-    <span class="tech-tag">Activation</span>
-  </div>
-</div>
-  </section>
+    <!-- Project 8: EdTech -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">EdTech – Course Recommendation System</div>
+        <span class="project-badge">System Design</span>
+      </div>
+      <p class="project-desc">Designed a personalized learning recommendation system for an online education platform. Defined PRD for 3 personas. Proposed two-stage hybrid ML architecture achieving 200ms latency with 60-70% cost reduction.</p>
+      <ul class="project-highlights">
+        <li>Target: 25% engagement lift, 30% completion improvement, 20% satisfaction boost</li>
+        <li>Stage 1: Lightweight collaborative filtering (50-100ms)</li>
+        <li>Stage 2: Neural ranking model with real-time context (100-150ms)</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">PRD</span>
+        <span class="tech-tag">System Design</span>
+        <span class="tech-tag">ML Architecture</span>
+        <span class="tech-tag">Personalization</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/01/17/1E2S5YAWIPE4COJ2.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Case Study PDF</a>
+        <a href="https://www.loom.com/share/a5e95afb876e4556b403100ab9c0dc5d" target="_blank" class="proj-btn proj-btn-loom">🎬 Loom Video</a>
+      </div>
+    </div>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-inner">
-      <div class="section-label" style="justify-content:center">Let's connect</div>
-      <h2>Say hello 👋</h2>
-      <p>
-        I'm actively looking for PM opportunities and would love to chat. Whether it's a role, a collaboration, or just a great conversation about products — my inbox is always open.
-      </p>
-      <div class="contact-links">
+    <!-- Project 9: Twitter/X -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div class="project-title">Twitter/X – AARRR Growth Strategy</div>
+        <span class="project-badge">Growth PM</span>
+      </div>
+      <p class="project-desc">Mapped Twitter/X's full AARRR funnel and identified 60% activation drop-off as the core problem — "Empty Feed Syndrome". Proposed 3 sequenced epics to grow WAU from 245M to 300M and revenue from $2.5B to $3.5B.</p>
+      <ul class="project-highlights">
+        <li>Root cause: X is the only platform requiring manual feed building before seeing value</li>
+        <li>Epic 1: Shadow Feeds — AI topic clusters before following anyone</li>
+        <li>RICE #1: First Day Magic — reduce activation drop from 60% to 30%</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">AARRR Funnel</span>
+        <span class="tech-tag">Growth Strategy</span>
+        <span class="tech-tag">RICE Framework</span>
+        <span class="tech-tag">Activation</span>
+      </div>
+      <div class="project-links">
+        <a href="https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/01/24/NYTA3Q6SUF6VU74L.pdf" target="_blank" class="proj-btn proj-btn-pdf">📄 Case Study PDF</a>
+        <a href="https://www.loom.com/share/1a165cc7927244c0bf1672daf39d82d7" target="_blank" class="proj-btn proj-btn-loom">🎬 Loom Video</a>
+      </div>
+    </div>
+
+  </div>
+</section>  
+  <div class="contact-links">
         <a href="mailto:hiagarwalmanisha@gmail.com" class="contact-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           hiagarwalmanisha@gmail.com
