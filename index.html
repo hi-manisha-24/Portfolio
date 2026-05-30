@@ -16,15 +16,15 @@
     overflow-x: hidden;
   }
   
-  /* PREDICTIVE CORE ANALYTICS GRAPH ENGINE BACKGROUND */
-  #predictive-mesh-bg {
+  /* HIGH-FIDELITY ACTIVE INTERACTIVE MESH ENGINE BACKGROUND */
+  #interactive-mesh-bg {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: 0; pointer-events: none;
-    opacity: 0.9;
+    opacity: 0.85;
   }
 
-  /* Fixed Translucent Navigation Framework */
+  /* Fixed Premium Navigation Framework Bar */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -40,57 +40,58 @@
   .nav-links a { color: rgba(255, 255, 255, 0.5); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: all 0.3s ease; }
   .nav-links a:hover { color: #E5A995; text-shadow: 0 0 12px rgba(229, 169, 149, 0.4); }
   
-  /* Harsh-Style Big Presentation Hero Framework */
+  /* BADA BOLD HERO FRAME CONTAINER (Inspired by Harsh Style) */
   .hero { 
     position: relative; z-index: 10; min-height: 100vh; 
     display: flex; flex-direction: column; justify-content: center; 
     padding: 0 80px; padding-top: 140px; padding-bottom: 80px;
-    max-w: 1300px; margin: 0 auto; gap: 48px;
+    max-w: 1340px; margin: 0 auto; gap: 54px;
   }
   .hero-row {
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; items: center; width: 100%;
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; items: center; width: 100%;
   }
   .hero-content { display: flex; flex-direction: column; align-items: flex-start; }
   
-  .badge-live { display: inline-flex; align-items: center; gap: 8px; background: rgba(229, 169, 149, 0.05); border: 1px solid rgba(229, 169, 149, 0.2); padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; color: #E5A995; tracking: 0.5px; margin-bottom: 24px; text-transform: uppercase; }
+  .badge-live { display: inline-flex; align-items: center; gap: 8px; background: rgba(229, 169, 149, 0.06); border: 1px solid rgba(229, 169, 149, 0.2); padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; color: #E5A995; tracking: 0.5px; margin-bottom: 24px; text-transform: uppercase; }
   .badge-dot { width: 6px; height: 6px; background: #E5A995; border-radius: 50%; animation: pulse-glow 2s infinite; }
   @keyframes pulse-glow { 0% { transform: scale(0.9); opacity: 0.6; } 50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 12px #E5A995; } 100% { transform: scale(0.9); opacity: 0.6; } }
   
-  .name-line { font-size: 64px; font-weight: 800; margin-bottom: 20px; letter-spacing: -2.5px; line-height: 1.1; }
+  /* Bada Text Fonts Setup for High Visual Attraction */
+  .name-line { font-size: 68px; font-weight: 800; margin-bottom: 20px; letter-spacing: -2.5px; line-height: 1.05; }
   .name-line span { background: linear-gradient(90deg, #FFF 40%, #E5A995 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   
-  .typing-wrap { font-size: 26px; font-weight: 600; color: #E5A995; height: 40px; margin-bottom: 24px; display: flex; align-items: center; }
+  .typing-wrap { font-size: 26px; font-weight: 600; color: #E5A995; height: 40px; margin-bottom: 26px; display: flex; align-items: center; }
   .cursor { display: inline-block; width: 2.5px; height: 26px; background: #E5A995; margin-left: 5px; animation: blink 0.8s step-end infinite; }
   @keyframes blink { 50% { opacity: 0 } }
   
   .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-primary { padding: 16px 36px; background: #E5A995; border: none; border-radius: 12px; color: #08080a; font-size: 14.5px; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; }
+  .btn-primary { padding: 16px 36px; background: #E5A995; border: none; border-radius: 12px; color: #060608; font-size: 14.5px; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; }
   .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(229, 169, 149, 0.25); background: #f5c2b3; }
   .btn-secondary { padding: 16px 36px; background: transparent; border: 1.5px solid rgba(229, 169, 149, 0.4); border-radius: 12px; color: #E5A995; font-size: 14.5px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; text-decoration: none; display: inline-block; }
   .btn-secondary:hover { background: rgba(229, 169, 149, 0.04); border-color: #E5A995; transform: translateY(-2px); }
   
-  /* Harsh-Style Big Presentation Video Container Box Component */
+  /* Bada Immersive Presentation Video Frame Component */
   .hero-illustration { width: 100%; display: flex; justify-content: center; }
-  .video-container { position: relative; width: 100%; min-width: 460px; background: rgba(12, 12, 15, 0.85); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 28px; padding: 14px; box-shadow: 0 40px 80px rgba(0,0,0,0.7); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(20px); }
-  .video-container:hover { transform: translateY(-6px); box-shadow: 0 50px 100px rgba(229, 169, 149, 0.18); border-color: rgba(229, 169, 149, 0.4); }
+  .video-container { position: relative; width: 100%; min-width: 480px; background: rgba(10, 10, 12, 0.85); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 28px; padding: 14px; box-shadow: 0 40px 80px rgba(0,0,0,0.8); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(20px); }
+  .video-container:hover { transform: translateY(-6px); box-shadow: 0 50px 100px rgba(229, 169, 149, 0.2); border-color: rgba(229, 169, 149, 0.4); }
   .video-frame-wrapper { width: 100%; aspect-ratio: 16/9; border-radius: 18px; overflow: hidden; background: #000; }
   .video-frame-wrapper video { width: 100%; height: 100%; object-fit: cover; }
-  .video-tagline { font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 12px; text-align: center; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+  .video-tagline { font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 12px; text-align: center; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
   
-  /* Sayan Gupta-Style Matrix Summary Board Grid */
+  /* Sayan Gupta-Style Metrics Analysis Dashboard Row */
   .metrics-dashboard { width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); padding: 32px; border-radius: 24px; backdrop-filter: blur(16px); margin-top: 24px; }
   .dashboard-stat { text-align: center; position: relative; }
   .dashboard-stat:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 15%; height: 70%; width: 1px; background: rgba(255, 255, 255, 0.05); }
-  .dashboard-num { font-size: 36px; font-weight: 800; color: #E5A995; margin-bottom: 4px; tracking: -0.5px; }
+  .dashboard-num { font-size: 38px; font-weight: 800; color: #E5A995; margin-bottom: 4px; tracking: -0.5px; }
   .dashboard-lbl { font-size: 11px; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
   
-  /* Sections Configuration Parameters */
-  section { padding: 120px 80px; position: relative; z-index: 10; max-w: 1300px; margin: 0 auto; }
-  .section-heading { font-size: 38px; font-weight: 800; text-align: center; letter-spacing: -1px; margin-bottom: 14px; }
+  /* Layout Section Coordinates bounds */
+  section { padding: 120px 80px; position: relative; z-index: 10; max-w: 1340px; margin: 0 auto; }
+  .section-heading { font-size: 40px; font-weight: 800; text-align: center; letter-spacing: -1px; margin-bottom: 14px; }
   .section-heading span { background: linear-gradient(90deg, #FFF 30%, #E5A995 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .section-sub { text-align: center; color: rgba(255, 255, 255, 0.4); font-size: 15px; margin-bottom: 72px; }
   
-  /* Profile Brief Summary Section Layout */
+  /* Profiles Brief Details Summary Area */
   .intro { display: flex; align-items: center; gap: 60px; border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .intro-text { flex: 1; }
   .intro-para { color: rgba(255, 255, 255, 0.65); font-size: 16px; line-height: 1.9; margin-bottom: 24px; }
@@ -100,7 +101,7 @@
   .pill { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 6px 18px; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.7); }
   .pill.purple { background: rgba(229, 169, 149, 0.06); border-color: rgba(229, 169, 149, 0.2); color: #E5A995; font-weight: 600; }
   
-  /* Extended Comprehensive Toolkit Matrix Grid (All Core Skills) */
+  /* Extensive Comprehensive Toolkit Blocks (Sayan Layout Grid) */
   .skills { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .skills-matrix-wrapper { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .skill-block { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 32px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(10px); }
@@ -109,7 +110,7 @@
   .block-tags { display: flex; flex-wrap: wrap; gap: 8px; }
   .block-tag { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 8px; padding: 6px 12px; font-size: 12px; color: rgba(255, 255, 255, 0.6); font-weight: 500; }
   
-  /* Airtribe Certification Display Section Grid Hub */
+  /* Airtribe Certification Display Panels Link Syncing */
   .credentials-hub { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .cert-card { background: linear-gradient(145deg, rgba(255,255,255,0.005) 0%, rgba(229,169,149,0.005) 100%); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; padding: 32px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; backdrop-filter: blur(12px); min-height: 210px; }
@@ -121,7 +122,7 @@
   .cert-link-btn { position: absolute; bottom: 28px; right: 32px; font-size: 12px; color: #E5A995; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 4px; transition: all 0.2s; }
   .cert-link-btn:hover { color: #fff; text-shadow: 0 0 10px #E5A995; }
   
-  /* Asymmetric Project Cards Grid Presentation (Sayan Layout System) */
+  /* Asymmetric Portfolios Layout Grid Platforms (Sayan style) */
   .projects { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .project-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 24px; padding: 36px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; display: flex; flex-direction: column; backdrop-filter: blur(12px); }
@@ -145,7 +146,7 @@
   .card-link:hover { background: #E5A995; color: #08080a; }
   .featured-badge { position: absolute; top: 14px; right: 14px; background: linear-gradient(135deg, #FFF, #E5A995); border-radius: 5px; padding: 4px 10px; font-size: 9px; font-weight: 800; color: #08080a; letter-spacing: 0.5px; }
   
-  /* Experience Layout Matrix Timeline Components */
+  /* Experience Layout Matrix Timeline Component */
   .experience-section { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .timeline-container { max-w: 900px; margin: 0 auto; position: relative; padding-left: 40px; }
   .timeline-container::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: rgba(255, 255, 255, 0.08); }
@@ -159,7 +160,7 @@
   .exp-bullets li { font-size: 14px; color: rgba(255, 255, 255, 0.6); line-height: 1.85; margin-bottom: 12px; position: relative; padding-left: 18px; }
   .exp-bullets li::before { content: '•'; position: absolute; left: 0; color: #E5A995; font-weight: 700; }
 
-  /* Interactive Contact Strategy Panel Form */
+  /* Interactive Form Contacts Layout Box Frame */
   .contact { border-top: 1px solid rgba(255, 255, 255, 0.04); text-align: center; padding-bottom: 120px; }
   .contact-cards { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
   .contact-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 18px; padding: 22px 26px; min-width: 160px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; backdrop-filter: blur(8px); }
@@ -207,8 +208,8 @@
 </head>
 <body>
 
-<!-- REAL AI DATA MATRICES PREDICTIVE BACKGROUND CANVAS OVERLAY -->
-<canvas id="predictive-mesh-bg"></canvas>
+<!-- THE LIVE GEOMETRIC NETWORK STREAMS INTERACTIVE MESH ENGINE -->
+<canvas id="interactive-mesh-bg"></canvas>
 
 <nav>
   <div class="logo">MANISHA.PM</div>
@@ -220,16 +221,16 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
-    <!-- Secure Underscore Tracking Path mapping seamlessly -->
+    <!-- Safe accurate resume path translation syncing[cite: 2] -->
     <li><a href="./Manisha_Agarwal_PM_Resume.pdf" target="_blank" style="color: #E5A995; font-weight: 600;">Resume</a></li>
   </ul>
 </nav>
 
-<!-- HERO LAYOUT PANEL -->
+<!-- HERO CONTAINER LAYOUT AREA -->
 <section class="hero" id="home">
   <div class="hero-row">
     <div class="hero-content">
-      <div class="badge-live"><div class="badge-dot"></div>Open for APM / PM Assignments[cite: 2]</div>
+      <div class="badge-live"><div class="badge-dot"></div>Open for APM / PM Mandates[cite: 2]</div>
       <div class="name-line">Building <span>Intelligent AI</span> Products[cite: 2].</div>
       <div class="typing-wrap"><span id="typing"></span><span class="cursor"></span></div>
       
@@ -239,7 +240,7 @@
       </div>
     </div>
     
-    <!-- Harsh-Style Large Presentation Frame Block component -->
+    <!-- Harsh-Style Bada Presentation Video Block Frame -->
     <div class="hero-illustration">
       <div class="video-container">
         <div class="video-frame-wrapper">
@@ -253,7 +254,7 @@
     </div>
   </div>
   
-  <!-- Sayan Gupta-Style Scoreboard Rows Display -->
+  <!-- Quantitative Impact Scoreboard Dashboard Row Matrix Layout -->
   <div class="metrics-dashboard">
     <div class="dashboard-stat"><div class="dashboard-num">5+ Yrs</div><div class="dashboard-lbl">At Cognizant[cite: 2]</div></div>
     <div class="dashboard-stat"><div class="dashboard-num">62%</div><div class="dashboard-lbl">Profile Fraud Isolated[cite: 2]</div></div>
@@ -262,7 +263,7 @@
   </div>
 </section>
 
-<!-- ABOUT PROFILE SECTION -->
+<!-- ABOUT DEEP PROFILE CONFIGURATION SUMMARY -->
 <section class="intro reveal" id="about">
   <div class="intro-text">
     <div class="section-heading" style="text-align: left; margin-bottom: 24px;">LET ME <span>INTRODUCE</span> MYSELF</div>
@@ -278,7 +279,7 @@
   </div>
 </section>
 
-<!-- DETAILED CORE TOOLKITS GRID CHIPS MATRIX -->
+<!-- COMPREHENSIVE SKILLS BLOCKS ADVANCED MATRIX (Harsh & Sayan Style) -->
 <section class="skills reveal" id="skills">
   <div class="section-heading">PRODUCT <span>TOOLKITS</span></div>
   <div class="section-sub">The execution layers, analysis architectures, and frameworks I apply to cross product bottlenecks[cite: 2]</div>
@@ -316,7 +317,7 @@
   </div>
 </section>
 
-<!-- VERIFIED LICENSES GRID CONTAINER -->
+<!-- AIRTRIBE VERIFIED CREDENTIALS CONTAINER HUBS GRID -->
 <section class="credentials-hub reveal" id="credentials">
   <div class="section-heading">LICENSES & <span>CERTIFICATIONS</span></div>
   <div class="section-sub">Active product track credentials earned across verified Airtribe education systems[cite: 2]</div>
@@ -348,7 +349,7 @@
   </div>
 </section>
 
-<!-- PROJECTS DATA MATRIX BLOCKS (Sayan Layout Grid Setup) -->
+<!-- ASYMMETRIC LARGE PROJECTS CASES MOCK GRID (Sayan Core Layout) -->
 <section class="projects reveal" id="projects">
   <div class="section-heading">CASE ESSAYS & <span>PROTOTYPES</span></div>
   <div class="section-sub">Deep behavioral analysis mapping target metric changes across high-volume platforms[cite: 2]</div>
@@ -429,7 +430,7 @@
       <div class="card-title">Zomato – Cohort Churn Optimization Metrics[cite: 2]</div>
       <div class="card-desc">Deconstructed workspace customer actions to manage active customer habits inside standard 30-day retention views[cite: 2].</div>
       <div class="card-metrics">
-        <div class="metric">Isolated structural friction behind an 82% Day-30 marketplace churn dropout rate to design a 3-phase strategic roadmap[cite: 2].</div>
+        <div class="metric">Isolated structural friction behind an 82% Day-30 marketplace dropout rate to design a 3-phase strategic roadmap[cite: 2].</div>
         <div class="metric font-semibold">Established North Star targets tracking 4M Weekly Active Orderers[cite: 2].</div>
       </div>
       <div class="card-chips"><span class="chip">Cohort Breakdown[cite: 2]</span><span class="chip">OKRs Trees[cite: 2]</span><span class="chip">Retention Metrics</span></div>
@@ -437,7 +438,7 @@
   </div>
 </section>
 
-<!-- PROFESSIONAL TIMELINE CONTAINER SECTION -->
+<!-- PROFESSIONAL EXPERIENCES TIMELINE GRID SECTION -->
 <section class="experience-section reveal" id="experience">
   <div class="section-heading">PROFESSIONAL <span>EXPERIENCE</span></div>
   <div class="section-sub">Over five years directing high-volume platform accounts and AI evaluation standards[cite: 2]</div>
@@ -461,7 +462,7 @@
   </div>
 </section>
 
-<!-- CONTACT MATRIX SECTION -->
+<!-- CONTACT MATRIX SYSTEM SECTION -->
 <section class="contact reveal" id="contact">
   <div class="section-heading">CONNECT WITH <span>MANISHA</span></div>
   <div class="section-sub">Open to APM/PM assignments, platform strategy discussions, or high-fidelity prototype reviews ☕</div>
@@ -493,25 +494,22 @@
 
 <div class="footer">© 2026 Manisha Agarwal · AI-First Product Manager · Crafted with analytical depth and intention ✨</div>
 
-<!-- DYNAMIC BACKEND INTEGRATED ANALYSIS CODES -->
+<!-- CONSTELLATION NETWORK MESH ANIMATION LOGIC ENGINE -->
 <script>
   /* 
-     HIGHLY INNOVATIVE INTELLIGENT AI-MATRIX PREDICTIVE GRAPH BG ENGINE
-     Generates pulsing target loops, abstract code coordinates and lines magnetically reacting to pointer positions.
+     INTERACTIVE GEOMETRIC NETWORK STREAMS BACKGROUND ENGINE
+     Spins up a high-end data field layer that generates line nodes dynamically mapped to cursor positions.
   */
-  const canvas = document.getElementById('predictive-mesh-bg');
+  const canvas = document.getElementById('interactive-mesh-bg');
   const ctx = canvas.getContext('2d');
   
   let width = canvas.width = window.innerWidth;
   let height = canvas.height = window.innerHeight;
   
   let points = [];
-  const maxPoints = window.innerWidth < 768 ? 35 : 90;
-  const targetDistance = 125;
+  const maxPoints = window.innerWidth < 768 ? 40 : 105;
+  const targetDistance = 120;
   let mouse = { x: null, y: null, radius: 180 };
-  
-  // Custom abstract metadata labels string matrix variables
-  const dataTokens = ["KPI", "RICE", "NPS>20", "AARRR", "GenAI", "PRD v1.0", "[0x4F]", "+", "OKRs"];
 
   window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
@@ -523,17 +521,18 @@
     mouse.y = e.clientY;
   });
 
-  window.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+  window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
 
   class Point {
     constructor() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.3;
-      this.vy = (Math.random() - 0.5) * 0.3;
-      this.radius = Math.random() * 1.5 + 1;
-      this.token = dataTokens[Math.floor(Math.random() * dataTokens.length)];
-      this.isText = Math.random() > 0.75; // 25% nodes render as data strings
+      this.vx = (Math.random() - 0.5) * 0.35;
+      this.vy = (Math.random() - 0.5) * 0.35;
+      this.radius = Math.random() * 1.6 + 1;
     }
     update() {
       this.x += this.vx;
@@ -541,28 +540,23 @@
       if (this.x < 0 || this.x > width) this.vx *= -1;
       if (this.y < 0 || this.y > height) this.vy *= -1;
       
+      // Magnetic cursor tracking calculations
       if (mouse.x !== null && mouse.y !== null) {
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
         let dist = Math.sqrt(dx*dx + dy*dy);
         if (dist < mouse.radius) {
           let force = (mouse.radius - dist) / mouse.radius;
-          this.x -= dx * force * 0.02;
-          this.y -= dy * force * 0.02;
+          this.x -= dx * force * 0.025;
+          this.y -= dy * force * 0.025;
         }
       }
     }
     draw() {
       ctx.beginPath();
-      if(this.isText) {
-        ctx.font = "9px monospace";
-        ctx.fillStyle = 'rgba(229, 169, 149, 0.18)';
-        ctx.fillText(this.token, this.x, this.y);
-      } else {
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(229, 169, 149, 0.25)';
-        ctx.fill();
-      }
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(229, 169, 149, 0.25)';
+      ctx.fill();
     }
   }
 
@@ -573,15 +567,16 @@
   function animateNetwork() {
     ctx.clearRect(0, 0, width, height);
     
-    // Core radial lighting underlay loop
+    // Ambient color glow mapping under cursor elements
     if (mouse.x !== null && mouse.y !== null) {
-      let radialGlow = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 250);
-      radialGlow.addColorStop(0, 'rgba(229, 169, 149, 0.045)');
+      let radialGlow = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 260);
+      radialGlow.addColorStop(0, 'rgba(229, 169, 149, 0.04)');
       radialGlow.addColorStop(1, 'transparent');
       ctx.fillStyle = radialGlow;
       ctx.fillRect(0, 0, width, height);
     }
 
+    // Trace network geometric vectors
     for (let i = 0; i < points.length; i++) {
       points[i].update();
       points[i].draw();
@@ -597,7 +592,7 @@
           ctx.lineTo(points[j].x, points[j].y);
           let alpha = (targetDistance - dist) / targetDistance * 0.15;
           ctx.strokeStyle = `rgba(229, 169, 149, ${alpha})`;
-          ctx.lineWidth = 0.6;
+          ctx.lineWidth = 0.65;
           ctx.stroke();
         }
       }
@@ -606,7 +601,7 @@
   }
   animateNetwork();
   
-  /* Running headers pipeline text animations */
+  /* Running loop header subheader scripts animation pipeline */
   const roles = ['AI-First Product Manager', 'User Discovery & Data Strategist', 'RICE Feature Prioritisation Expert', 'Functional Interactive Prototyper'];
   let ri = 0, ci = 0, del = false;
   const el = document.getElementById('typing');
@@ -618,13 +613,14 @@
   }
   type();
   
-  /* On-Scroll slide elements intersection animations triggers */
+  /* Scroll Element Reveal Monitors scripts calculation checks */
   function reveal() {
     const reveals = document.querySelectorAll('.reveal');
     reveals.forEach(el => {
       const windowHeight = window.innerHeight;
       const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 100) {
+      const elementVisible = 100;
+      if (elementTop < windowHeight - elementVisible) {
         el.classList.add('active');
       }
     });
@@ -632,6 +628,7 @@
   window.addEventListener('scroll', reveal);
   reveal();
   
+  /* Message submit actions script layout changes */
   document.getElementById('sendBtn').addEventListener('click', function() {
     this.textContent = 'Message Dispatched! ✨';
     this.style.background = 'linear-gradient(135deg, #2e7d32, #4caf50)';
