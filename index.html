@@ -1,639 +1,469 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Manisha Agarwal | AI-First Product Manager</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; background: #08080a; }
-  body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background: #08080a;
-    color: #FBF9F6;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  
-  /* PREMIUM ACTIVE MESH ENGINE BACKGROUND */
-  #interactive-mesh-bg {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 0; pointer-events: none;
-    opacity: 0.9;
-  }
-
-  /* Fixed Custom Header Menu */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 24px 80px; background: rgba(8, 8, 10, 0.75);
-    backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-  }
-  .logo {
-    font-weight: 800; font-size: 16px; tracking: -0.5px;
-    background: linear-gradient(135deg, #FFF 30%, #E5A995 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  }
-  .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
-  .nav-links a { color: rgba(255, 255, 255, 0.5); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: all 0.3s ease; }
-  .nav-links a:hover { color: #E5A995; text-shadow: 0 0 12px rgba(229, 169, 149, 0.4); }
-  
-  /* BOLD WIDE HERO LAYOUT ZONE */
-  .hero { 
-    position: relative; z-index: 10; min-height: 100vh; 
-    display: flex; flex-direction: column; justify-content: center; 
-    padding: 0 80px; padding-top: 140px; padding-bottom: 80px;
-    max-w: 1340px; margin: 0 auto; gap: 54px;
-  }
-  .hero-row {
-    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; items: center; width: 100%;
-  }
-  .hero-content { display: flex; flex-direction: column; align-items: flex-start; }
-  
-  .badge-live { display: inline-flex; align-items: center; gap: 8px; background: rgba(229, 169, 149, 0.06); border: 1px solid rgba(229, 169, 149, 0.2); padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; color: #E5A995; tracking: 0.5px; margin-bottom: 24px; text-transform: uppercase; }
-  .badge-dot { width: 6px; height: 6px; background: #E5A995; border-radius: 50%; animation: pulse-glow 2s infinite; }
-  @keyframes pulse-glow { 0% { transform: scale(0.9); opacity: 0.6; } 50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 12px #E5A995; } 100% { transform: scale(0.9); opacity: 0.6; } }
-  
-  .name-line { font-size: 68px; font-weight: 800; margin-bottom: 20px; letter-spacing: -2.5px; line-height: 1.05; }
-  .name-line span { background: linear-gradient(90deg, #FFF 40%, #E5A995 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  
-  .typing-wrap { font-size: 26px; font-weight: 600; color: #E5A995; height: 40px; margin-bottom: 26px; display: flex; align-items: center; }
-  .cursor { display: inline-block; width: 2.5px; height: 26px; background: #E5A995; margin-left: 5px; animation: blink 0.8s step-end infinite; }
-  @keyframes blink { 50% { opacity: 0 } }
-  
-  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-primary { padding: 16px 36px; background: #E5A995; border: none; border-radius: 12px; color: #060608; font-size: 14.5px; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; }
-  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(229, 169, 149, 0.25); background: #f5c2b3; }
-  .btn-secondary { padding: 16px 36px; background: transparent; border: 1.5px solid rgba(229, 169, 149, 0.4); border-radius: 12px; color: #E5A995; font-size: 14.5px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; text-decoration: none; display: inline-block; }
-  .btn-secondary:hover { background: rgba(229, 169, 149, 0.04); border-color: #E5A995; transform: translateY(-2px); }
-  
-  /* Bada Immersive Video Section Frame (Harsh Layout Style) */
-  .hero-illustration { width: 100%; display: flex; justify-content: center; }
-  .video-container { position: relative; width: 100%; min-width: 480px; background: rgba(10, 10, 12, 0.85); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 28px; padding: 14px; box-shadow: 0 40px 80px rgba(0,0,0,0.8); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(20px); }
-  .video-container:hover { transform: translateY(-6px); box-shadow: 0 50px 100px rgba(229, 169, 149, 0.2); border-color: rgba(229, 169, 149, 0.4); }
-  .video-frame-wrapper { width: 100%; aspect-ratio: 16/9; border-radius: 18px; overflow: hidden; background: #000; }
-  .video-frame-wrapper video { width: 100%; height: 100%; object-fit: cover; }
-  .video-tagline { font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 12px; text-align: center; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
-  
-  /* Sayan Gupta-Style Dynamic Matrix Metric Row */
-  .metrics-dashboard { width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); padding: 32px; border-radius: 24px; backdrop-filter: blur(16px); margin-top: 24px; }
-  .dashboard-stat { text-align: center; position: relative; }
-  .dashboard-stat:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 15%; height: 70%; width: 1px; background: rgba(255, 255, 255, 0.05); }
-  .dashboard-num { font-size: 38px; font-weight: 800; color: #E5A995; margin-bottom: 4px; tracking: -0.5px; }
-  .dashboard-lbl { font-size: 11px; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
-  
-  /* Sections Configuration Parameters */
-  section { padding: 120px 80px; position: relative; z-index: 10; max-w: 1340px; margin: 0 auto; }
-  .section-heading { font-size: 40px; font-weight: 800; text-align: center; letter-spacing: -1px; margin-bottom: 14px; }
-  .section-heading span { background: linear-gradient(90deg, #FFF 30%, #E5A995 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  .section-sub { text-align: center; color: rgba(255, 255, 255, 0.4); font-size: 15px; margin-bottom: 72px; }
-  
-  /* Profiles Brief Details Summary Section */
-  .intro { display: flex; align-items: center; gap: 60px; border-top: 1px solid rgba(255, 255, 255, 0.04); }
-  .intro-text { flex: 1; }
-  .intro-para { color: rgba(255, 255, 255, 0.65); font-size: 16px; line-height: 1.9; margin-bottom: 24px; }
-  .intro-para .hi { color: #fff; font-weight: 600; }
-  .intro-para .accent { color: #E5A995; font-weight: 600; }
-  .skill-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
-  .pill { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 6px 18px; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.7); }
-  .pill.purple { background: rgba(229, 169, 149, 0.06); border-color: rgba(229, 169, 149, 0.2); color: #E5A995; font-weight: 600; }
-  
-  /* Comprehensive Toolkits Blocks Matrix (Sayan Style) */
-  .skills { border-top: 1px solid rgba(255, 255, 255, 0.04); }
-  .skills-matrix-wrapper { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .skill-block { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 32px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(10px); }
-  .skill-block:hover { background: rgba(229, 169, 149, 0.015); border-color: rgba(229, 169, 149, 0.25); transform: translateY(-4px); box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
-  .block-title { font-size: 16px; font-weight: 700; color: #E5A995; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .block-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .block-tag { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 8px; padding: 6px 12px; font-size: 12px; color: rgba(255, 255, 255, 0.6); font-weight: 500; }
-  
-  /* Airtribe Certification Verification Display Track */
-  .credentials-hub { border-top: 1px solid rgba(255, 255, 255, 0.04); }
-  .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .cert-card { background: linear-gradient(145deg, rgba(255,255,255,0.005) 0%, rgba(229,169,149,0.005) 100%); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; padding: 32px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; backdrop-filter: blur(12px); min-height: 210px; }
-  .cert-card:hover { border-color: rgba(229, 169, 149, 0.3); transform: scale(1.02); background: rgba(229, 169, 149, 0.03); box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
-  .cert-authority { font-size: 10px; font-weight: 700; color: #E5A995; text-transform: uppercase; tracking: 1px; margin-bottom: 10px; }
-  .cert-name { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.4; }
-  .cert-date { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 20px; font-weight: 500; }
-  .cert-tag-pill { display: inline-block; background: rgba(255,255,255,0.02); border-radius: 6px; padding: 4px 10px; font-size: 10.5px; color: rgba(255, 255, 255, 0.45); font-weight: 600; margin-top: auto; align-self: flex-start; }
-  .cert-link-btn { position: absolute; bottom: 28px; right: 32px; font-size: 12px; color: #E5A995; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 4px; transition: all 0.2s; }
-  .cert-link-btn:hover { color: #fff; text-shadow: 0 0 10px #E5A995; }
-  
-  /* Asymmetric Projects Layout System (Sayan Layout Grid) */
-  .projects { border-top: 1px solid rgba(255, 255, 255, 0.04); }
-  .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
-  .project-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 24px; padding: 36px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; display: flex; flex-direction: column; backdrop-filter: blur(12px); }
-  .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #FFF, #E5A995); opacity: 0; transition: opacity 0.3s; }
-  .project-card:hover { background: rgba(255, 255, 255, 0.015); border-color: rgba(229, 169, 149, 0.22); transform: translateY(-8px); box-shadow: 0 40px 80px rgba(0,0,0,0.6); }
-  .project-card:hover::before { opacity: 1; }
-  
-  .card-tag { display: inline-block; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 6px; padding: 4px 12px; font-size: 10px; font-weight: 700; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.5px; margin-bottom: 20px; text-transform: uppercase; align-self: flex-start; }
-  .card-tag.pink { background: rgba(229, 169, 149, 0.08); border-color: rgba(229, 169, 149, 0.2); color: #E5A995; }
-  
-  .card-emoji { font-size: 32px; margin-bottom: 14px; display: block; }
-  .card-title { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 12px; line-height: 1.35; tracking: -0.3px; }
-  .card-desc { font-size: 13px; color: rgba(255, 255, 255, 0.42); line-height: 1.8; margin-bottom: 20px; }
-  .card-metrics { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-  .metric { font-size: 12px; color: rgba(255, 255, 255, 0.55); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
-  .metric::before { content: '→'; color: #E5A995; font-weight: 700; flex-shrink: 0; }
-  .card-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-bottom: 16px; }
-  .chip { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 8px; padding: 4px 10px; font-size: 10.5px; color: rgba(255, 255, 255, 0.4); font-weight: 500; }
-  .card-links { display: flex; gap: 10px; margin-top: 12px; }
-  .card-link { font-size: 11.5px; color: #E5A995; text-decoration: none; background: rgba(229, 169, 149, 0.05); border: 1px solid rgba(229, 169, 149, 0.15); border-radius: 8px; padding: 8px 16px; font-weight: 700; transition: all 0.2s; width: 100%; text-align: center; tracking: 0.2px; }
-  .card-link:hover { background: #E5A995; color: #08080a; }
-  .featured-badge { position: absolute; top: 14px; right: 14px; background: linear-gradient(135deg, #FFF, #E5A995); border-radius: 5px; padding: 4px 10px; font-size: 9px; font-weight: 800; color: #08080a; letter-spacing: 0.5px; }
-  
-  /* Experience Layout Matrix Timeline Component */
-  .experience-section { border-top: 1px solid rgba(255, 255, 255, 0.04); }
-  .timeline-container { max-w: 900px; margin: 0 auto; position: relative; padding-left: 40px; }
-  .timeline-container::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: rgba(255, 255, 255, 0.08); }
-  .timeline-item { position: relative; }
-  .timeline-dot { position: absolute; left: -45px; top: 5px; width: 11px; height: 11px; border-radius: 50%; background: #E5A995; border: 3px solid #08080a; box-shadow: 0 0 10px #E5A995; }
-  .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
-  .exp-title { font-size: 19px; font-weight: 700; color: #fff; tracking: -0.2px; }
-  .exp-company { font-size: 15px; color: #E5A995; font-weight: 600; margin-bottom: 16px; }
-  .exp-duration { font-size: 13px; color: rgba(255, 255, 255, 0.35); font-weight: 500; }
-  .exp-bullets { list-style: none; }
-  .exp-bullets li { font-size: 14px; color: rgba(255, 255, 255, 0.6); line-height: 1.85; margin-bottom: 12px; position: relative; padding-left: 18px; }
-  .exp-bullets li::before { content: '•'; position: absolute; left: 0; color: #E5A995; font-weight: 700; }
-
-  /* Interactive Form Panel Layout Container */
-  .contact { border-top: 1px solid rgba(255, 255, 255, 0.04); text-align: center; padding-bottom: 120px; }
-  .contact-cards { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
-  .contact-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 18px; padding: 22px 26px; min-width: 160px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; backdrop-filter: blur(8px); }
-  .contact-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); background: rgba(229, 169, 149, 0.02); border-color: rgba(229, 169, 149, 0.25); }
-  .contact-icon { font-size: 28px; }
-  .contact-label { font-size: 13.5px; font-weight: 700; color: rgba(255, 255, 255, 0.8); }
-  .contact-value { font-size: 11px; color: rgba(255, 255, 255, 0.35); font-weight: 500; }
-  
-  .contact-form { max-width: 560px; margin: 0 auto; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-  .form-input { width: 100%; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 14px 18px; font-size: 13.5px; color: #fff; font-family: inherit; outline: none; transition: border-color 0.3s ease; }
-  .form-input::placeholder { color: rgba(255, 255, 255, 0.25); }
-  .form-input:focus { border-color: rgba(229, 169, 149, 0.4); }
-  .form-textarea { width: 100%; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 14px 18px; font-size: 13.5px; color: #fff; font-family: inherit; outline: none; resize: none; height: 120px; transition: border-color 0.3s ease; margin-bottom: 14px; }
-  .form-textarea::placeholder { color: rgba(255, 255, 255, 0.25); }
-  .form-textarea:focus { border-color: rgba(229, 169, 149, 0.4); }
-  .btn-send { width: 100%; padding: 14px; background: #E5A995; border: none; border-radius: 10px; color: #08080a; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.3s ease; }
-  .btn-send:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(229, 169, 149, 0.2); background: #f5c2b3; }
-  
-  .footer { text-align: center; padding: 36px; color: rgba(255, 255, 255, 0.15); font-size: 12.5px; border-top: 1px solid rgba(255, 255, 255, 0.03); position: relative; z-index: 10; font-weight: 500; }
-  
-  /* Scroll Element Reveal Animations style transitions */
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
-  .reveal.active { opacity: 1; transform: translateY(0); }
-
-  @media(max-width: 968px) {
-    nav { padding: 18px 32px; }
-    .nav-links { display: none; }
-    .hero { padding: 120px 24px 60px; text-align: center; }
-    .hero-row { grid-template-columns: 1fr; gap: 40px; }
-    .hero-content { align-items: center; }
-    .name-line { font-size: 42px; }
-    .typing-wrap { justify-content: center; font-size: 20px; }
-    .hero-btns { justify-content: center; }
-    .video-container { min-width: 100%; }
-    .metrics-dashboard { grid-template-columns: repeat(2, 1fr); gap: 14px; padding: 20px; }
-    .dashboard-stat:not(:last-child)::after { display: none; }
-    .skills-matrix-wrapper { grid-template-columns: 1fr; gap: 16px; }
-    .cert-grid { grid-template-columns: 1fr; }
-    .projects-grid { grid-template-columns: 1fr; gap: 20px; }
-    section { padding: 80px 24px; }
-    .form-row { grid-template-columns: 1fr; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manisha Agarwal | AI Product Mission Control</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .animate-blink { animation: blink 1s infinite; }
+        .glass-surface {
+            background: rgba(17, 24, 39, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-[#030712] text-[#F8FAFC] font-sans selection:bg-[#8B5CF6]/40 selection:text-white relative overflow-x-hidden min-h-screen"
+      x-data="{ 
+        activeStage: 'discover', 
+        typewriterText: 'AI Product Manager',
+        typewriterIndex: 0,
+        roles: ['AI Product Manager', 'Product Strategist', 'GenAI Enthusiast', 'Product Thinker']
+      }"
+      x-init="setInterval(() => { 
+          typewriterIndex = (typewriterIndex + 1) % roles.length; 
+          typewriterText = roles[typewriterIndex];
+      }, 3000)">
 
-<!-- THE LIVE GEOMETRIC NETWORK STREAMS INTERACTIVE MESH ENGINE BACKGROUND -->
-<canvas id="interactive-mesh-bg"></canvas>
-
-<nav>
-  <div class="logo">MANISHA.PM</div>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Toolkits</a></li>
-    <li><a href="#credentials">Credentials</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <!-- Secure accurate underscore file tracking to block out 404 links[cite: 2] -->
-    <li><a href="./Manisha_Agarwal_PM_Resume.pdf" target="_blank" style="color: #E5A995; font-weight: 600;">Resume</a></li>
-  </ul>
-</nav>
-
-<!-- HERO LAYOUT MAIN COMPONENT ROW -->
-<section class="hero" id="home">
-  <div class="hero-row">
-    <div class="hero-content">
-      <div class="badge-live"><div class="badge-dot"></div>Open for APM / PM Mandates[cite: 2]</div>
-      <div class="name-line">Building <span>Intelligent AI</span> Products.</div>
-      <div class="typing-wrap"><span id="typing"></span><span class="cursor"></span></div>
-      
-      <div class="hero-btns">
-        <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Explore Case Studies ↗</button>
-        <a href="./Manisha_Agarwal_PM_Resume.pdf" target="_blank" download class="btn-secondary">Download Resume</a>
-      </div>
-    </div>
-    
-    <!-- Harsh-Style Bada Presentation Video Canvas Frame component -->
-    <div class="hero-illustration">
-      <div class="video-container">
-        <div class="video-frame-wrapper">
-          <video controls preload="metadata">
-            <source src="WhatsApp Video 2026-05-29 at 8.19.16 PM.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="video-tagline">Video Briefing: Core Analytics & Execution Strategy</div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Quantitative Impact Scoreboard Dashboard Row -->
-  <div class="metrics-dashboard">
-    <div class="dashboard-stat"><div class="dashboard-num">5+ Yrs</div><div class="dashboard-lbl">At Cognizant[cite: 2]</div></div>
-    <div class="dashboard-stat"><div class="dashboard-num">62%</div><div class="dashboard-lbl">Profile Fraud Isolated[cite: 2]</div></div>
-    <div class="dashboard-stat"><div class="dashboard-num">54</div><div class="dashboard-lbl">UX Premium Surveyed[cite: 2]</div></div>
-    <div class="dashboard-stat"><div class="dashboard-num">20%</div><div class="dashboard-lbl">GenAI Output Boost[cite: 2]</div></div>
-  </div>
-</section>
-
-<!-- ABOUT DEEP PROFILE CONFIGURATION SUMMARY -->
-<section class="intro reveal" id="about">
-  <div class="intro-text">
-    <div class="section-heading" style="text-align: left; margin-bottom: 24px;">LET ME <span>INTRODUCE</span> MYSELF</div>
-    <p class="intro-para">I fell in love with <span class="hi">understanding customer problems</span> — mapping fragmented qualitative complications into objective, data-backed technical goals is where I track best[cite: 2].</p>
-    <p class="intro-para">I ground my product processes inside meticulous <span class="accent">User Discovery & Analytical Insight Loops</span> — sorting tracking trees to isolate conversion drops accurately[cite: 2].</p>
-    <p class="intro-para">I run the systematic <span class="accent">RICE framework matrix</span> to strip out features bloat — weighing metric reach against engineering resource boundaries cleanly[cite: 2].</p>
-    <p class="intro-para">As an <span class="hi">AI-First Product Management candidate transitioning from a non-technical background</span>, I use Claude and Lovable to rapidly build functional interface sandboxes and visually test hypotheses[cite: 2].</p>
-    <div class="skill-pills">
-      <span class="pill">🔍 Qualitative Discovery Loops</span><span class="pill">⚖️ RICE Feature Prioritisation</span><span class="pill">📋 PRD Architecture v1.0</span>
-      <span class="pill purple">🤖 Generative AI Operations</span><span class="pill purple">💬 Prompt Engineering Logic</span><span class="pill purple">🚀 Rapid Interactive Prototyping</span>
-      <span class="pill">📊 Metric Tree Audits</span><span class="pill">📈 AARRR Growth Funnels</span><span class="pill">🗺️ Product Roadmapping</span>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCT SKILLS CORES ENHANCED MATRIX GRID (Sayan Layout Block structure) -->
-<section class="skills reveal" id="skills">
-  <div class="section-heading">PRODUCT <span>TOOLKITS</span></div>
-  <div class="section-sub">The execution layers, analysis architectures, and frameworks I apply to cross product bottlenecks[cite: 2]</div>
-  
-  <div class="skills-matrix-wrapper">
-    <!-- Block 1 -->
-    <div class="skill-block">
-      <div class="block-title">🔍 Core Product Skills[cite: 2]</div>
-      <div class="block-tags">
-        <span class="block-tag">Product Strategy</span><span class="block-tag">Roadmapping</span><span class="block-tag">Development Lifecycle</span>
-        <span class="block-tag">PRD Writing</span><span class="block-tag">GTM Strategy</span><span class="block-tag">Agile Methodologies</span>
-        <span class="block-tag">Scrum Management</span><span class="block-tag">Project Tracking</span><span class="block-tag">Stakeholder Management</span>
-        <span class="block-tag">Team Leadership</span><span class="block-tag">Problem Solving</span>
-      </div>
-    </div>
-    <!-- Block 2 -->
-    <div class="skill-block">
-      <div class="block-title">📊 Technical & Analytical[cite: 2]</div>
-      <div class="block-tags">
-        <span class="block-tag">RICE Prioritisation</span><span class="block-tag">MoSCoW Engine</span><span class="block-tag">OKRs Mapping</span>
-        <span class="block-tag">AARRR Funnels</span><span class="block-tag">JTBD Framework</span><span class="block-tag">Kano Modeling</span>
-        <span class="block-tag">Story Mapping</span><span class="block-tag">Data Analysis</span><span class="block-tag">User Discovery</span>
-        <span class="block-tag">Cohort Analysis</span><span class="block-tag">Usability Testing</span><span class="block-tag">Target Surveys</span>
-      </div>
-    </div>
-    <!-- Block 3 -->
-    <div class="skill-block">
-      <div class="block-title">🤖 AI & Prototyping Systems[cite: 2]</div>
-      <div class="block-tags">
-        <span class="block-tag">Claude AI Studio</span><span class="block-tag">ChatGPT Core</span><span class="block-tag">Lovable Builder</span>
-        <span class="block-tag">Canva AI Platforms</span><span class="block-tag">Prompt Architecture</span><span class="block-tag">Figma Workspaces</span>
-        <span class="block-tag">Atlassian Jira</span><span class="block-tag">UX Choreography</span><span class="block-tag">Rapid MVPs Execution</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AIRTRIBE OFFICIAL DEPLOYED LICENSES HUBS -->
-<section class="credentials-hub reveal" id="credentials">
-  <div class="section-heading">LICENSES & <span>CERTIFICATIONS</span></div>
-  <div class="section-sub">Active product track credentials earned across verified Airtribe education systems[cite: 2]</div>
-  <div class="cert-grid">
-    <!-- Cert 1 -->
-    <div class="cert-card">
-      <div class="cert-authority">Airtribe Apprenticeship Program[cite: 2]</div>
-      <div class="cert-name">Product Management Launchpad Credential[cite: 2]</div>
-      <div class="cert-date">Issued Track Period 2026[cite: 2]</div>
-      <span class="cert-tag-pill">End-to-End Core Strategy</span>
-      <a class="cert-link-btn" href="https://www.airtribe.live/product-management/certificate/DO5F4NTASLLD" target="_blank">Verify Link ↗</a>
-    </div>
-    <!-- Cert 2 -->
-    <div class="cert-card">
-      <div class="cert-authority">Airtribe Builders Lab[cite: 2]</div>
-      <div class="cert-name">Claude for Product Builders[cite: 2]</div>
-      <div class="cert-date">Issued March 2026[cite: 2]</div>
-      <span class="cert-tag-pill">Generative AI Products</span>
-      <a class="cert-link-btn" href="https://www.airtribe.live/workshop/certificate/MJ7YCFC07600" target="_blank">Verify Link ↗</a>
-    </div>
-    <!-- Cert 3 -->
-    <div class="cert-card">
-      <div class="cert-authority">Airtribe Growth Lab[cite: 2]</div>
-      <div class="cert-name">Quick Prototyping for Product Builders[cite: 2]</div>
-      <div class="cert-date">Issued April 2026[cite: 2]</div>
-      <span class="cert-tag-pill">Rapid MVPs & Lovable Apps</span>
-      <a class="cert-link-btn" href="https://www.airtribe.live/workshop/certificate/YKIBD2PT8D17" target="_blank">Verify Link ↗</a>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO CASES GRIDS MATRIX (Sayan Layout Core Style) -->
-<section class="projects reveal" id="projects">
-  <div class="section-heading">CASE ESSAYS & <span>PROTOTYPES</span></div>
-  <div class="section-sub">Deep behavioral analysis mapping target metric changes across high-volume platforms[cite: 2]</div>
-  
-  <div class="projects-grid">
-    <!-- Case 1: Shaadi.com -->
-    <div class="project-card">
-      <div class="featured-badge">HIGHLIGHT ESSAY</div>
-      <span class="card-emoji">💍</span><div class="card-tag pink">Trust & Platform Integrity[cite: 2]</div>
-      <div class="card-title">Shaadi.com – TrustMatch AI Security Layer[cite: 2]</div>
-      <div class="card-desc">Evaluated ecosystem trust drops across prominent matrimony profile interfaces to architect an automated progressive verification solution framework[cite: 2].</div>
-      <div class="card-metrics">
-        <div class="metric">Audited 2,400+ consumer feedback reviews to isolate a 62% profile safety pain point[cite: 2].</div>
-        <div class="metric font-semibold">Designed Progressive Verification parameters utilizing RICE metrics (Priority Weight: 204)[cite: 2].</div>
-        <div class="metric">Authored product PRD v1.0 alongside a 6-month phased GTM roadmap targeting clear NPS improvements[cite: 2].</div>
-      </div>
-      <div class="card-chips"><span class="chip">RICE prioritisation</span><span class="chip">PRD Synthesis</span><span class="chip">GTM Strategy Layouts</span></div>
-      <div class="card-links"><a class="card-link" href="https://hi-manisha-24.github.io/shaadi-trustmatch/" target="_blank">Launch Active Sandbox</a></div>
-    </div>
-
-    <!-- Case 2: Candlelit -->
-    <div class="project-card">
-      <div class="featured-badge">UX SANDBOX</div>
-      <span class="card-emoji">🕯️</span><div class="card-tag pink">Interaction Choreography</div>
-      <div class="card-title">Candlelit – Component Feedback Sandbox</div>
-      <div class="card-desc">Designed and deployed an active layout environment to validate state updates, component choreography patterns, and visual animations.</div>
-      <div class="card-metrics">
-        <div class="metric">Built clean interface configurations for flawless viewport switching.</div>
-        <div class="metric">Minimized multi-step pipeline actions to streamline checkout loops.</div>
-        <div class="metric">Published functional, live layout system modules utilizing GitHub Pages.</div>
-      </div>
-      <div class="card-chips"><span class="chip">UX Component Cues</span><span class="chip">Interface Sandbox</span><span class="chip">Live Testing</span></div>
-      <div class="card-links"><a class="card-link" href="https://hi-manisha-24.github.io/candlelit/" target="_blank">Launch Active Sandbox</a></div>
-    </div>
-
-    <!-- Case 3: Crafto Premium Conversion -->
-    <div class="project-card">
-      <div class="featured-badge">LIVE APP MODULE</div>
-      <span class="card-emoji">🎨</span><div class="card-tag pink">Conversion Optimization[cite: 2]</div>
-      <div class="card-title">Crafto – Monetization Strategy Framework[cite: 2]</div>
-      <div class="card-desc">End-to-end monetization metrics deep-dive structuring transaction steps for Tier 2 and Tier 3 regional consumer groups[cite: 2].</div>
-      <div class="card-metrics">
-        <div class="metric">Surveyed 54 targeted consumers to track premium checkout drop-off triggers[cite: 2].</div>
-        <div class="metric font-semibold">Leveraged RICE modeling trees to build a high-impact pricing level at ₹49[cite: 2].</div>
-        <div class="metric">Shipped a complete functional checkout simulation prototype using Lovable AI tools[cite: 2].</div>
-      </div>
-      <div class="card-chips"><span class="chip">AARRR Funnels</span><span class="chip">User Surveys</span><span class="chip">Lovable App Builder</span></div>
-      <div class="card-links"><a class="card-link" href="https://crafto-pm-launchpad-manisha-agarwal.lovable.app/" target="_blank">Launch Live App</a></div>
-    </div>
-
-    <!-- Case 4: Uber Reserve Strategy -->
-    <div class="project-card">
-      <span class="card-emoji">🚗</span><div class="card-tag purple">Product Strategy[cite: 2]</div>
-      <div class="card-title">Uber Reserve – Booking Fulfillment Guarantees[cite: 2]</div>
-      <div class="card-desc">Isolated customer assignment certainty constraints across scheduled high-volume trip bookings to implement backend matching protections[cite: 2].</div>
-      <div class="card-metrics">
-        <div class="metric">Applied deep Jobs-To-Be-Done (JTBD) criteria and First Principles analytical logic[cite: 2].</div>
-        <div class="metric">Structured backend matching trees tracking automated driver locks and delays credits[cite: 2].</div>
-      </div>
-      <div class="card-chips"><span class="chip">JTBD Matrix</span><span class="chip">First Principles Logic</span></div>
-    </div>
-
-    <!-- Case 5: Twitter/X Activation Strategy -->
-    <div class="project-card">
-      <span class="card-emoji">🐦</span><div class="card-tag purple">Growth PM Strategy[cite: 2]</div>
-      <div class="card-title">Twitter/X – Onboarding Funnel Optimizations[cite: 2]</div>
-      <div class="card-desc">Audited customer conversion drop-offs to block pipeline leakage during early social account onboarding[cite: 2].</div>
-      <div class="card-metrics">
-        <div class="metric">Isolated a massive 60% system activation loss window tracking to "Empty Feed Syndrome"[cite: 2].</div>
-        <div class="metric">Designed AI-First Shadow Feed loops to pull activation drop-offs down to a targeted 30% metric[cite: 2].</div>
-      </div>
-      <div class="card-chips"><span class="chip">Funnel Tuning</span><span class="chip">AARRR Analysis[cite: 2]</span></div>
-    </div>
-
-    <!-- Case Study 6: Zomato User Churn Retention -->
-    <div class="project-card">
-      <span class="card-emoji">🍕</span><div class="card-tag purple">Retention Architecture[cite: 2]</div>
-      <div class="card-title">Zomato – Cohort Churn Optimization Metrics[cite: 2]</div>
-      <div class="card-desc">Deconstructed workspace customer actions to manage active customer habits inside standard 30-day retention views[cite: 2].</div>
-      <div class="card-metrics">
-        <div class="metric">Isolated structural friction behind an 82% Day-30 marketplace dropout rate to design a 3-phase strategic roadmap[cite: 2].</div>
-        <div class="metric font-semibold">Established North Star targets tracking 4M Weekly Active Orderers[cite: 2].</div>
-      </div>
-      <div class="card-chips"><span class="chip">Cohort Breakdown[cite: 2]</span><span class="chip">OKRs Trees[cite: 2]</span><span class="chip">Retention Metrics</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROFESSIONAL TIMELINE CONTAINER SECTION -->
-<section class="experience-section reveal" id="experience">
-  <div class="section-heading">PROFESSIONAL <span>EXPERIENCE</span></div>
-  <div class="section-sub">Over five years directing high-volume platform accounts and AI evaluation standards[cite: 2]</div>
-  
-  <div class="timeline-container">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="exp-header">
-        <div class="exp-title">Senior Process Analyst / Pseudo-Product Owner</div>
-        <div class="exp-duration">2021 — Present[cite: 2]</div>
-      </div>
-      <div class="exp-company">Cognizant Technology Solutions · Remote[cite: 2]</div>
-      <ul class="exp-bullets">
-        <li>Optimized ad click-through conversion behavior parameters by roughly 15% through high-quality sitelink setups, maintaining a 98% strict operational SLA baseline[cite: 2].</li>
-        <li>Enhanced core Generative AI product output response reliability metrics by 20% by design and setup of automated evaluation frameworks[cite: 2].</li>
-        <li>Coordinated cross-functional milestones across 4 main global client regions as a pseudo-product owner, cutting operational delivery constraints by 25%[cite: 2].</li>
-        <li>Lowered recurring operational model error metrics by 15% by tracking diagnostic testing parameters and passing clean action tickets to engineering stakeholders[cite: 2].</li>
-        <li>Accelerated technical squad time-to-productivity onboardings by 15% by documenting system edge-cases and centralizing model response parameters[cite: 2].</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT MATRIX SYSTEM SECTION -->
-<section class="contact reveal" id="contact">
-  <div class="section-heading">CONNECT WITH <span>MANISHA</span></div>
-  <div class="section-sub">Open to APM/PM assignments, platform strategy discussions, or high-fidelity prototype reviews ☕</div>
-  <div class="contact-cards">
-    <a class="contact-card" href="mailto:hiagarwalmanisha@gmail.com">
-      <div class="contact-icon">📧</div><div class="contact-label">Email</div><div class="contact-value">hiagarwalmanisha@gmail.com</div>
-    </a>
-    <a class="contact-card" href="https://www.linkedin.com/in/hi-manisha-agarwal/" target="_blank">
-      <div class="contact-icon">💼</div><div class="contact-label">LinkedIn</div><div class="contact-value">hi-manisha-agarwal</div>
-    </a>
-    <a class="contact-card" href="https://github.com/hi-manisha-24" target="_blank">
-      <div class="contact-icon">🐙</div><div class="contact-label">GitHub</div><div class="contact-value">hi-manisha-24</div>
-    </a>
-    <a class="contact-card" href="https://manisha-agarwal.vercel.app/" target="_blank">
-      <div class="contact-icon">🌐</div><div class="contact-label">Portfolio</div><div class="contact-value">manisha-agarwal.vercel.app</div>
-    </a>
-  </div>
-  
-  <div class="contact-form">
-    <div class="form-row">
-      <input class="form-input" type="text" placeholder="Your Name"/>
-      <input class="form-input" type="email" placeholder="Your Email"/>
-    </div>
-    <input class="form-input" type="text" placeholder="Subject" style="width:100%;margin-bottom:14px;"/>
-    <textarea class="form-textarea" placeholder="Your thoughts — let's trace funnels and build intelligent user products together..."></textarea>
-    <button class="btn-send" id="sendBtn">Send Message ↗</button>
-  </div>
-</section>
-
-<div class="footer">© 2026 Manisha Agarwal · AI-First Product Manager · Crafted with analytical depth and intention ✨</div>
-
-<!-- CONSTELLATION NETWORK MESH ANIMATION LOGIC ENGINE -->
-<script>
-  /* 
-     INTERACTIVE GEOMETRIC NETWORK STREAMS BACKGROUND ENGINE
-     Spins up a high-end data field layer that generates line nodes dynamically mapped to cursor positions.
-  */
-  const canvas = document.getElementById('interactive-mesh-bg');
-  const ctx = canvas.getContext('2d');
-  
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
-  
-  let points = [];
-  const maxPoints = window.innerWidth < 768 ? 40 : 105;
-  const targetDistance = 120;
-  let mouse = { x: null, y: null, radius: 180 };
-
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-
-  window.addEventListener('mouseleave', () => {
-    mouse.x = null;
-    mouse.y = null;
-  });
-
-  class Point {
-    constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.35;
-      this.vy = (Math.random() - 0.5) * 0.35;
-      this.radius = Math.random() * 1.6 + 1;
-    }
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < 0 || this.x > width) this.vx *= -1;
-      if (this.y < 0 || this.y > height) this.vy *= -1;
-      
-      // Magnetic cursor tracking calculations
-      if (mouse.x !== null && mouse.y !== null) {
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < mouse.radius) {
-          let force = (mouse.radius - dist) / mouse.radius;
-          this.x -= dx * force * 0.025;
-          this.y -= dy * force * 0.025;
-        }
-      }
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(229, 169, 149, 0.25)';
-      ctx.fill();
-    }
-  }
-
-  for (let i = 0; i < maxPoints; i++) {
-    points.push(new Point());
-  }
-
-  function animateNetwork() {
-    ctx.clearRect(0, 0, width, height);
-    
-    // Ambient color glow mapping under cursor elements
-    if (mouse.x !== null && mouse.y !== null) {
-      let radialGlow = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 260);
-      radialGlow.addColorStop(0, 'rgba(229, 169, 149, 0.04)');
-      radialGlow.addColorStop(1, 'transparent');
-      ctx.fillStyle = radialGlow;
-      ctx.fillRect(0, 0, width, height);
-    }
-
-    // Trace network geometric vectors
-    for (let i = 0; i < points.length; i++) {
-      points[i].update();
-      points[i].draw();
-      
-      for (let j = i + 1; j < points.length; j++) {
-        let dx = points[i].x - points[j].x;
-        let dy = points[i].y - points[j].y;
-        let dist = Math.sqrt(dx*dx + dy*dy);
+    <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-30">
+        <div class="absolute inset-0 bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
         
-        if (dist < targetDistance) {
-          ctx.beginPath();
-          ctx.moveTo(points[i].x, points[i].y);
-          ctx.lineTo(points[j].x, points[j].y);
-          let alpha = (targetDistance - dist) / targetDistance * 0.15;
-          ctx.strokeStyle = `rgba(229, 169, 149, ${alpha})`;
-          ctx.lineWidth = 0.65;
-          ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(animateNetwork);
-  }
-  animateNetwork();
-  
-  /* Running loop header subheader scripts animation pipeline */
-  const roles = ['AI-First Product Manager', 'User Discovery & Data Strategist', 'RICE Feature Prioritisation Expert', 'Functional Interactive Prototyper'];
-  let ri = 0, ci = 0, del = false;
-  const el = document.getElementById('typing');
-  function type() {
-    const cur = roles[ri];
-    if(!del) { el.textContent = cur.slice(0, ++ci); if(ci === cur.length) { del = true; setTimeout(type, 2000); return; } }
-    else { el.textContent = cur.slice(0, --ci); if(ci === 0) { del = false; ri = (ri+1) % roles.length; } }
-    setTimeout(type, del ? 35 : 65);
-  }
-  type();
-  
-  /* Scroll Element Reveal Monitors scripts calculation checks */
-  function reveal() {
-    const reveals = document.querySelectorAll('.reveal');
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 100;
-      if (elementTop < windowHeight - elementVisible) {
-        el.classList.add('active');
-      }
-    });
-  }
-  window.addEventListener('scroll', reveal);
-  reveal();
-  
-  /* Message submit actions script layout changes */
-  document.getElementById('sendBtn').addEventListener('click', function() {
-    this.textContent = 'Message Dispatched! ✨';
-    this.style.background = 'linear-gradient(135deg, #2e7d32, #4caf50)';
-    this.style.color = '#fff';
-    setTimeout(() => { this.textContent = 'Send Message ↗'; this.style.background = ''; this.style.color = ''; }, 3000);
-  });
-</script>
+        <div class="absolute top-1/4 left-10 text-[9px] font-mono text-[#94A3B8]/20 whitespace-pre hidden md:block">
+[SYS_LOG // MONITOR]
+INIT DATA_BUS_CONNECTED...
+RICE_PRIORITY_MAX = 204
+FUNNEL_CHURN_THRESHOLD = 0.82
+STATUS: MISSION_READY
+        </div>
+        <div class="absolute top-2/3 right-12 text-[9px] font-mono text-[#94A3B8]/20 whitespace-pre hidden md:block">
+▲ GROWTH_METRIC_TREE
+  ├── AARRR_ACQUISITION (1.00)
+  ├── AARRR_ACTIVATION (0.40)
+  └── AARRR_RETENTION (0.18)
+        </div>
+
+        <div class="absolute top-[12%] left-[15%] text-[10px] font-mono text-[#94A3B8]/10 animate-pulse">⚡ AI</div>
+        <div class="absolute top-[35%] right-[20%] text-[10px] font-mono text-[#94A3B8]/10 animate-pulse">⚡ PRD</div>
+        <div class="absolute top-[55%] left-[8%] text-[10px] font-mono text-[#94A3B8]/10 animate-pulse">⚡ North Star</div>
+        <div class="absolute top-[72%] right-[10%] text-[10px] font-mono text-[#94A3B8]/10 animate-pulse">⚡ RICE Matrix</div>
+        <div class="absolute top-[88%] left-[25%] text-[10px] font-mono text-[#94A3B8]/10 animate-pulse">⚡ JTBD</div>
+        <div class="absolute top-[22%] right-[40%] text-[10px] font-mono text-[#94A3B8]/10 animate-pulse">⚡ Growth Funnel</div>
+    </div>
+
+    <header class="sticky top-0 z-40 w-full border-b border-slate-900 bg-[#030712]/70 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 rounded-full bg-[#8B5CF6] animate-ping absolute"></div>
+                <div class="w-3 h-3 rounded-full bg-[#8B5CF6] relative"></div>
+                <span class="font-mono text-xs tracking-widest text-[#F8FAFC]">MANISHA.PM // MISSION CONTROL</span>
+            </div>
+            <nav class="hidden md:flex space-x-1 font-mono text-xs">
+                <a href="#core" class="px-3 py-2 text-[#94A3B8] hover:text-[#22D3EE] transition-colors">[SYSTEM_CORE]</a>
+                <a href="#journey" class="px-3 py-2 text-[#94A3B8] hover:text-[#22D3EE] transition-colors">[JOURNEY]</a>
+                <a href="#metrics" class="px-3 py-2 text-[#94A3B8] hover:text-[#22D3EE] transition-colors">[IMPACT_METRICS]</a>
+                <a href="#thinking" class="px-3 py-2 text-[#94A3B8] hover:text-[#22D3EE] transition-colors">[THINKING]</a>
+                <a href="#cases" class="px-3 py-2 text-[#94A3B8] hover:text-[#22D3EE] transition-colors">[CASE_STUDIES]</a>
+            </nav>
+            <div>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/20">
+                    ⚡ APM_MANDATE_READY
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-32">
+        
+        <section id="core" class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-4 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 text-xs font-mono text-[#F59E0B] bg-[#F59E0B]/10 px-3 py-1 rounded-full border border-[#F59E0B]/20">
+                    <span>AIRTRIBE PM CERTIFIED</span>
+                    <span>•</span>
+                    <span>5+ YEARS AT COGNIZANT</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none bg-gradient-to-r from-[#F8FAFC] via-[#F8FAFC] to-[#94A3B8] bg-clip-text text-transparent">
+                    Turning AI Capabilities into Meaningful User Experiences.
+                </h1>
+                <div class="h-8 flex items-center font-mono text-lg text-[#22D3EE]">
+                    <span class="mr-2 text-[#94A3B8]">&gt;</span>
+                    <span x-text="typewriterText" class="font-semibold drop-shadow-[0_0_8px_rgba(34,211,238,0.3)]"></span>
+                    <span class="w-2 h-5 bg-[#22D3EE] ml-1 animate-blink"></span>
+                </div>
+                <p class="text-base text-[#94A3B8] max-w-2xl leading-relaxed">
+                    AI-focused Product Management professional with 5+ years of experience improving AI quality systems, solving user problems through data, and building scalable product solutions.
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+                    <div class="glass-surface p-4 rounded-xl relative overflow-hidden border border-[#8B5CF6]/30">
+                        <div class="text-xl sm:text-2xl font-bold text-[#F8FAFC] font-mono">5+ Yrs</div>
+                        <div class="text-xs text-[#94A3B8] mt-1">Cognizant Track</div>
+                    </div>
+                    <div class="glass-surface p-4 rounded-xl relative overflow-hidden border border-[#22D3EE]/30">
+                        <div class="text-xl sm:text-2xl font-bold text-[#F8FAFC] font-mono">20%</div>
+                        <div class="text-xs text-[#94A3B8] mt-1">GenAI Output Boost</div>
+                    </div>
+                    <div class="glass-surface p-4 rounded-xl relative overflow-hidden border border-[#F59E0B]/30">
+                        <div class="text-xl sm:text-2xl font-bold text-[#F8FAFC] font-mono">62%</div>
+                        <div class="text-xs text-[#94A3B8] mt-1">Profile Fraud Isolated</div>
+                    </div>
+                    <div class="glass-surface p-4 rounded-xl relative overflow-hidden border border-slate-800">
+                        <div class="text-xl sm:text-2xl font-bold text-[#F8FAFC] font-mono">6 Case</div>
+                        <div class="text-xs text-[#94A3B8] mt-1">Product Studies</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="./Manisha_Agarwal_PM_Resume.pdf" target="_blank" class="px-6 py-3 bg-[#8B5CF6] text-white rounded-lg font-mono text-xs font-semibold hover:bg-[#8B5CF6]/90 transition-all shadow-[0_0_15px_rgba(139,92,246,0.3)] border border-[#8B5CF6]/50 flex items-center space-x-2">
+                        <span>VIEW RESUME</span> <span>↗</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hi-manisha-agarwal/" target="_blank" class="px-6 py-3 bg-[#111827]/80 text-[#F8FAFC] rounded-lg font-mono text-xs font-semibold hover:bg-[#111827] transition-all border border-slate-800">
+                        LINKEDIN GATEWAY
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#8B5CF6] to-[#22D3EE] opacity-20 blur-md"></div>
+                <div class="relative bg-[#111827] border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="bg-[#030712] px-4 py-2 flex items-center justify-between border-b border-slate-800">
+                        <div class="flex items-center space-x-1.5">
+                            <div class="w-2.5 h-2.5 rounded-full bg-red-500/60"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-green-500/60"></div>
+                        </div>
+                        <div class="text-[10px] font-mono text-[#94A3B8]">AI_PM_EVALUATION_SUITE // PANEL</div>
+                        <div class="w-4"></div>
+                    </div>
+                    <div class="relative aspect-video bg-black/50 flex items-center justify-center">
+                        <video class="w-full h-full object-cover opacity-90" controls preload="metadata">
+                            <source src="./WhatsApp Video 2026-05-29 at 8.19.16 PM.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="p-4 bg-[#111827]/90 border-t border-slate-800/80 font-mono text-xs flex items-center justify-between">
+                        <div>
+                            <div class="text-[#F8FAFC] font-semibold">Core Analytics Briefing</div>
+                            <div class="text-[10px] text-[#94A3B8] mt-0.5">Execution & Discovery Mechanics</div>
+                        </div>
+                        <span class="px-2 py-0.5 text-[9px] bg-[#8B5CF6]/20 text-[#8B5CF6] border border-[#8B5CF6]/30 rounded">LAUNCH_HUD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey" class="space-y-8 scroll-mt-20">
+            <div class="space-y-2">
+                <div class="text-xs font-mono text-[#22D3EE] tracking-widest">// DEPLOYMENT SEQUENCER</div>
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">The Product Journey Pipeline</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 relative">
+                <div class="p-4 rounded-xl border border-[#8B5CF6]/40 glass-surface">
+                    <div class="font-mono text-xs font-bold text-[#F8FAFC]">Commerce Graduate</div>
+                    <div class="text-[11px] text-[#94A3B8] mt-1.5">Business & Quantitative Frameworks</div>
+                </div>
+                <div class="p-4 rounded-xl border border-[#8B5CF6]/40 glass-surface">
+                    <div class="font-mono text-xs font-bold text-[#F8FAFC]">Cognizant Track</div>
+                    <div class="text-[11px] text-[#94A3B8] mt-1.5">5+ Years Cross-Functional Analytics</div>
+                </div>
+                <div class="p-4 rounded-xl border border-[#8B5CF6]/40 glass-surface">
+                    <div class="font-mono text-xs font-bold text-[#F8FAFC]">GenAI Operations</div>
+                    <div class="text-[11px] text-[#94A3B8] mt-1.5">Automated Model Quality Architectures</div>
+                </div>
+                <div class="p-4 rounded-xl border border-[#22D3EE]/50 bg-[#111827]/60">
+                    <div class="font-mono text-xs font-bold text-[#22D3EE]">Product Thinking</div>
+                    <div class="text-[11px] text-[#94A3B8] mt-1.5">Deep Customer Loop Integration</div>
+                </div>
+                <div class="p-4 rounded-xl border border-[#22D3EE]/50 bg-[#111827]/60">
+                    <div class="font-mono text-xs font-bold text-[#22D3EE]">PM Launchpad</div>
+                    <div class="text-[11px] text-[#94A3B8] mt-1.5">Verified Airtribe Execution Core</div>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-800 opacity-60">
+                    <div class="font-mono text-xs font-bold text-slate-400">AI Product Manager</div>
+                    <div class="text-[11px] text-[#94A3B8] mt-1.5">APM / PM Target Mandates</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metrics" class="space-y-8 scroll-mt-20">
+            <div class="space-y-2">
+                <div class="text-xs font-mono text-[#8B5CF6] tracking-widest">// ENTERPRISE VALIDATION MATRIX</div>
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Work History & Impact Vectors</h2>
+            </div>
+            <div class="bg-[#111827]/40 border border-slate-800/80 rounded-2xl p-6 lg:p-8 space-y-8 relative">
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800/60 pb-6 gap-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#F8FAFC]">Senior Process Analyst / Pseudo-Product Owner</h3>
+                        <div class="text-sm text-[#22D3EE] font-mono mt-1">Cognizant Technology Solutions</div>
+                    </div>
+                    <div class="font-mono text-xs px-3 py-1 bg-slate-900 border border-slate-800 text-[#94A3B8] rounded-md">2021 — PRESENT</div>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-[#030712]/60 border border-slate-800 p-4 rounded-xl text-center">
+                        <div class="text-2xl font-mono font-bold text-[#8B5CF6]">15%</div>
+                        <div class="text-[10px] text-[#94A3B8] font-mono uppercase tracking-wider">CTR Conversion Lift</div>
+                    </div>
+                    <div class="bg-[#030712]/60 border border-slate-800 p-4 rounded-xl text-center">
+                        <div class="text-2xl font-mono font-bold text-[#8B5CF6]">20%</div>
+                        <div class="text-[10px] text-[#94A3B8] font-mono uppercase tracking-wider">GenAI Output Reliability</div>
+                    </div>
+                    <div class="bg-[#030712]/60 border border-slate-800 p-4 rounded-xl text-center">
+                        <div class="text-2xl font-mono font-bold text-[#8B5CF6]">25%</div>
+                        <div class="text-[10px] text-[#94A3B8] font-mono uppercase tracking-wider">Delivery Optimization</div>
+                    </div>
+                    <div class="bg-[#030712]/60 border border-slate-800 p-4 rounded-xl text-center">
+                        <div class="text-2xl font-mono font-bold text-[#8B5CF6]">98%</div>
+                        <div class="text-[10px] text-[#94A3B8] font-mono uppercase tracking-wider">SLA SLA Baseline</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="p-5 rounded-xl bg-[#030712]/30 border border-red-900/30">
+                        <span class="font-mono text-[10px] font-bold text-red-400 block mb-2">// CRITICAL PROBLEM</span>
+                        <p class="text-xs text-[#94A3B8] leading-relaxed">High-volume conversion loops suffered from fragmented sitelink configurations, leaking potential ecosystem interaction tracking signals.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-[#030712]/30 border border-amber-900/30">
+                        <span class="font-mono text-[10px] font-bold text-amber-400 block mb-2">// OWNED ACTIONS</span>
+                        <p class="text-xs text-[#94A3B8] leading-relaxed">Coordinated milestones across 4 distinct global client regions as pseudo-PO. Authored clear validation logs and passed clean parameters to engineering teams.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-[#030712]/30 border border-emerald-900/30">
+                        <span class="font-mono text-[10px] font-bold text-emerald-400 block mb-2">// PRODUCT IMPACT</span>
+                        <p class="text-xs text-[#94A3B8] leading-relaxed">Boosted sitelink click conversion parameters by ~15%, optimized core GenAI response evaluation systems by 20%, and reduced project blockers by 25%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="thinking" class="space-y-8 scroll-mt-20">
+            <div class="space-y-2">
+                <div class="text-xs font-mono text-[#F59E0B] tracking-widest">// INTELLECTUAL FRAMEWORK ENGINE</div>
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">How I Think Like a Product Manager</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#111827]/20 border border-slate-800 rounded-2xl p-6 lg:p-8">
+                <div class="lg:col-span-4 flex flex-col space-y-2 justify-center">
+                    <template x-for="stage in [
+                        { id: 'discover', title: '1. Discover', label: 'Metric Tree Audits & Data Signals' },
+                        { id: 'research', title: '2. Research', label: 'Qualitative Discovery Loops' },
+                        { id: 'prioritize', title: '3. Prioritize', label: 'RICE Optimization Engines' },
+                        { id: 'build', title: '4. Build', label: 'PRD Specifications & Sandboxes' },
+                        { id: 'measure', title: '5. Measure', label: 'AARRR Growth Funnel Integration' }
+                    ]">
+                        <button @click="activeStage = stage.id"
+                                :class="activeStage === stage.id ? 'bg-[#8B5CF6] border-[#8B5CF6] text-white shadow-lg' : 'bg-[#030712]/40 border-slate-800 text-[#94A3B8]'"
+                                class="w-full text-left px-4 py-3 rounded-xl border font-mono text-xs transition-all flex items-center justify-between">
+                            <span x-text="stage.title"></span>
+                            <span class="text-[9px]" x-text="activeStage === stage.id ? '● ACTIVE' : '⚡ VIEW'"></span>
+                        </button>
+                    </template>
+                </div>
+                <div class="lg:col-span-8 bg-[#030712]/60 border border-slate-800 rounded-xl p-6 relative flex flex-col justify-between min-h-[200px]">
+                    <div x-show="activeStage === 'discover'" class="space-y-3">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/20">Metric Tree Audits & Data Signals</span>
+                        <h4 class="text-lg font-bold">Discover & Track Failures</h4>
+                        <p class="text-xs text-[#94A3B8] leading-relaxed">Auditing live application conversion funnels and product pipeline interfaces to map conversion drop-offs perfectly before assigning features.</p>
+                    </div>
+                    <div x-show="activeStage === 'research'" class="space-y-3" x-cloak>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/20">Qualitative Mappings & JTBD Loops</span>
+                        <h4 class="text-lg font-bold">User Pain Diagnostics</h4>
+                        <p class="text-xs text-[#94A3B8] leading-relaxed">Running targeted discovery loops, consumer tracking panels, and deep reviews analysis to narrow qualitative frustration down to core functional goals.</p>
+                    </div>
+                    <div x-show="activeStage === 'prioritize'" class="space-y-3" x-cloak>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/20">RICE Engine Modeling</span>
+                        <h4 class="text-lg font-bold">Pruning Feature Bloat</h4>
+                        <p class="text-xs text-[#94A3B8] leading-relaxed">Weighing systematic Reach and Confidence points directly against limited team engineering parameters to lock onto highest value impact vectors cleanly.</p>
+                    </div>
+                    <div x-show="activeStage === 'build'" class="space-y-3" x-cloak>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/20">PRD Synthesis & Functional Sandboxes</span>
+                        <h4 class="text-lg font-bold">Rapid Interface Hypotheses</h4>
+                        <p class="text-xs text-[#94A3B8] leading-relaxed">Authoring flawless PRD v1.0 specifications and leveraging generative capabilities like Claude and Lovable to deploy active functional validation mockups rapidly.</p>
+                    </div>
+                    <div x-show="activeStage === 'measure'" class="space-y-3" x-cloak>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/20">AARRR Growth Funnel Integration</span>
+                        <h4 class="text-lg font-bold">Locking Cohort Metrics</h4>
+                        <p class="text-xs text-[#94A3B8] leading-relaxed">Configuring programmatic retention grids, North Star targets, and micro-interaction milestones across 30-day views to isolate churn mechanics accurately.</p>
+                    </div>
+                    <div class="text-[10px] font-mono text-slate-600 border-t border-slate-800/60 pt-4 mt-4 flex justify-between">
+                        <span>PIPELINE_ENGINE: RUNNING</span>
+                        <span>CORE_THEOREM: DATA_DRIVEN</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="space-y-8 scroll-mt-20">
+            <div class="space-y-2">
+                <div class="text-xs font-mono text-[#22D3EE] tracking-widest">// HIGH RECRUITER SCAFFOLDING CORES</div>
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Deep Behavioral Product Artifacts</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-[#111827]/40 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/40 transition-all shadow-xl">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-[10px] font-mono">
+                            <span class="text-[#8B5CF6] font-bold">HIGHLIGHT ESSAY // TRUST MECHANICS</span>
+                            <span class="text-slate-500">RICE Score: 204</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[#F8FAFC]">Shaadi.com – TrustMatch AI Security Layer</h3>
+                            <div class="text-xs text-[#94A3B8] font-mono">Ecosystem Platform Integrity Architecture</div>
+                        </div>
+                        <div class="space-y-2 text-xs border-t border-b border-slate-800/60 py-4 font-sans">
+                            <p class="text-[#94A3B8]"><strong class="text-red-400 font-mono text-[10px] block">PROBLEM:</strong> Audited 2,400+ consumer feedback reviews to isolate a 62% platform safety pain point.</p>
+                            <p class="text-[#94A3B8]"><strong class="text-amber-400 font-mono text-[10px] block">DISCOVERY LOOP:</strong> Located massive validation dropping trends where customer alignment was opaque.</p>
+                            <p class="text-[#94A3B8]"><strong class="text-emerald-400 font-mono text-[10px] block">PROPOSAL & ROADMAP:</strong> Designed progressive authentication loops and drafted complete PRD v1.0 alongside a 6-month phased GTM roadmap targeting clear NPS gains.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex space-x-2 text-[9px] font-mono text-slate-400">
+                            <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">RICE Priority</span>
+                            <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">PRD v1.0</span>
+                        </div>
+                        <a href="https://hi-manisha-24.github.io/shaadi-trustmatch/" target="_blank" class="text-xs font-mono font-bold text-[#22D3EE] flex items-center space-x-1"><span>Launch Sandbox</span> <span>↗</span></a>
+                    </div>
+                </div>
+
+                <div class="bg-[#111827]/40 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/40 transition-all shadow-xl">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-[10px] font-mono">
+                            <span class="text-[#8B5CF6] font-bold">LIVE APP MODULE // MONETIZATION</span>
+                            <span class="text-slate-500">Airtribe Builders Lab</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[#F8FAFC]">Crafto – Monetization Strategy Framework</h3>
+                            <div class="text-xs text-[#94A3B8] font-mono">Conversion Optimization Mapping</div>
+                        </div>
+                        <div class="space-y-2 text-xs border-t border-b border-slate-800/60 py-4 font-sans">
+                            <p class="text-[#94A3B8]"><strong class="text-red-400 font-mono text-[10px] block">PROBLEM:</strong> Premium transaction pipeline drops across Tier 2 and Tier 3 cohorts during checkout loops.</p>
+                            <p class="text-[#94A3B8]"><strong class="text-amber-400 font-mono text-[10px] block">DISCOVERY LOOP:</strong> Surveyed 54 targeted consumers to track checkout dropped boundaries accurately.</p>
+                            <p class="text-[#94A3B8]"><strong class="text-emerald-400 font-mono text-[10px] block">PROPOSAL & ROADMAP:</strong> Built localized macro pricing strategy sets optimized at a strict ₹49 tier value. Shipped complete live checkout simulation prototype using Lovable toolchains.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex space-x-2 text-[9px] font-mono text-slate-400">
+                            <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">AARRR Funnels</span>
+                            <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Lovable Engine</span>
+                        </div>
+                        <a href="https://crafto-pm-launchpad-manisha-agarwal.lovable.app/" target="_blank" class="text-xs font-mono font-bold text-[#22D3EE] flex items-center space-x-1"><span>Launch Live App</span> <span>↗</span></a>
+                    </div>
+                </div>
+
+                <div class="bg-[#111827]/40 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/40 transition-all shadow-xl">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-[10px] font-mono">
+                            <span class="text-[#8B5CF6] font-bold">GROWTH PM STRATEGY // ACTIVATION</span>
+                            <span class="text-slate-500">Onboarding Funnels</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[#F8FAFC]">Twitter/X – Onboarding Optimizations</h3>
+                            <div class="text-xs text-[#94A3B8] font-mono">Pipeline Friction Reduction</div>
+                        </div>
+                        <div class="space-y-2 text-xs border-t border-b border-slate-800/60 py-4 font-sans">
+                            <p class="text-[#94A3B8]"><strong class="text-red-400 font-mono text-[10px] block">PROBLEM:</strong> Isolated a massive 60% activation loss window due directly to structural "Empty Feed Syndrome".</p>
+                            <p class="text-[#94A3B8]"><strong class="text-emerald-400 font-mono text-[10px] block">PROPOSAL & ROADMAP:</strong> Designed AI-First Shadow Feed injection modules to populate immediate personalized interest indicators, targeting a contraction in onboarding leakage down to 30%.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex space-x-2 text-[9px] font-mono text-slate-400">
+                            <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Funnel Tuning</span>
+                            <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Shadow Feeds</span>
+                        </div>
+                        <span class="font-mono text-[9px] text-slate-600">// CORE_STRATEGY_TRACK</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#111827]/40 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/40 transition-all shadow-xl">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-[10px] font-mono">
+                            <span class="text-[#8B5CF6] font-bold">RETENTION STRUCTURE // OKRS</span>
+                            <span class="text-slate-500">Cohort Churn Optimization</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[#F8FAFC]">Zomato – Cohort Churn Metric Matrix</h3>
+                            <div class="text-xs text-[#94A3B8] font-mono">User Habit Stabilization Systems</div>
+                        </div>
+                        <div class="space-y-2 text-xs border-t border-b border-slate-800/60 py-4 font-sans">
+                            <p class="text-[#94A3B8]"><strong class="text-red-400 font-mono text-[10px] block">PROBLEM:</strong> Tracked structural context frictions creating an 82% Day-30 marketplace cohort dropout frequency.</p>
+                            <p class="text-[#94A3B8]"><strong class="text-emerald-400 font-mono text-[10px] block">PROPOSAL & ROADMAP:</strong> Established tight metric boundaries tracking 4M WAO. Constructed an analytical 3-phase habit formation roadmap to arrest early churn leakage paths.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex space-x-2 text-[9px] font-mono text-slate-400">
+                            <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Cohort Mapping</span>
+                            <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">OKRs Trees</span>
+                        </div>
+                        <span class="font-mono text-[9px] text-slate-600">// CORE_STRATEGY_TRACK</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-8">
+            <div class="space-y-2">
+                <div class="text-xs font-mono text-[#8B5CF6] tracking-widest">// PARAMETER REGISTRY MATRIX</div>
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Product Toolkits & Framework Matrices</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-[#111827]/30 border border-[#8B5CF6]/30 rounded-xl p-5 space-y-4">
+                    <h3 class="font-mono text-xs font-bold text-[#F8FAFC] tracking-wider">// CORE PRODUCT SKILLS</h3>
+                    <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-[#94A3B8]">
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Product Strategy</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Roadmapping</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">PRD Writing</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">GTM Strategy</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Agile Methods</span>
+                    </div>
+                </div>
+                <div class="bg-[#111827]/30 border border-[#22D3EE]/30 rounded-xl p-5 space-y-4">
+                    <h3 class="font-mono text-xs font-bold text-[#F8FAFC] tracking-wider">// TECHNICAL & ANALYTICAL</h3>
+                    <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-[#94A3B8]">
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">RICE Modeling</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">AARRR Funnels</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">JTBD Criteria</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Cohort Analysis</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">User Discovery</span>
+                    </div>
+                </div>
+                <div class="bg-[#111827]/30 border border-[#F59E0B]/30 rounded-xl p-5 space-y-4">
+                    <h3 class="font-mono text-xs font-bold text-[#F8FAFC] tracking-wider">// AI & PROTOTYPING SYSTEMS</h3>
+                    <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-[#94A3B8]">
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Claude AI Studio</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">ChatGPT Core</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Lovable Builder</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Prompt Logic</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Jira & Figma</span>
+                    </div>
+                </div>
+                <div class="bg-[#111827]/30 border border-emerald-500/20 rounded-xl p-5 space-y-4">
+                    <h3 class="font-mono text-xs font-bold text-[#F8FAFC] tracking-wider">// ACTIVE CREDENTIALS</h3>
+                    <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-[#94A3B8]">
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Airtribe PM Track</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Claude Core Workshop</span>
+                        <span class="bg-[#030712]/50 border border-slate-800/80 px-2 py-1 rounded">Rapid Prototyping Lab</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-t border-slate-800 pt-12 pb-6 space-y-8">
+            <div class="bg-[#111827]/40 border border-slate-800 rounded-xl p-6 text-center max-w-3xl mx-auto space-y-4">
+                <h3 class="text-xl font-bold text-[#F8FAFC]">Initialize Communications Gateway</h3>
+                <p class="text-xs text-[#94A3B8] max-w-md mx-auto leading-relaxed">
+                    Open to Associate Product Manager roles, data-driven framework evaluation slots, or core platform analytics alignment.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-xs pt-2 text-[#94A3B8]">
+                    <a href="mailto:hiagarwalmanisha@gmail.com" class="hover:text-[#8B5CF6] transition-colors">[EMAIL]</a>
+                    <a href="https://www.linkedin.com/in/hi-manisha-agarwal/" target="_blank" class="hover:text-[#22D3EE] transition-colors">[LINKEDIN]</a>
+                    <a href="https://github.com/hi-manisha-24" target="_blank" class="hover:text-emerald-400 transition-colors">[GITHUB]</a>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono text-slate-500 gap-4">
+                <div>© 2026 MANISHA AGARWAL • MISSION CONTROL PORTFOLIO ENGINE</div>
+                <div class="text-slate-600 font-mono">DENSITY ARCHITECTURE // STABLE PRODUCTION BUILD v1.0.0</div>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
