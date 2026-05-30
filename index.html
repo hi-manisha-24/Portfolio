@@ -7,31 +7,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; background: #08080a; }
+  html { scroll-behavior: smooth; background: #060608; }
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background: #08080a;
+    background: #060608;
     color: #FBF9F6;
     min-height: 100vh;
     overflow-x: hidden;
   }
   
-  /* PREMIUM CYBERSTATION TECH MESH BACKGROUND ENGINE */
-  #dynamic-grid-bg {
+  /* HIGHLY INNOVATIVE NEURAL VAPOR WAVE CANVAS BACKGROUND */
+  #neural-canvas {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: 0; pointer-events: none;
+    opacity: 0.9;
   }
 
-  /* Structural Minimalist Fixed Navigation */
+  /* Fixed Premium Navigation Framework */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
-    padding: 24px 80px; background: rgba(8, 8, 10, 0.75);
-    backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 24px 80px; background: rgba(6, 6, 8, 0.75);
+    backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   }
   .logo {
-    font-weight: 800; font-size: 16px; tracking: -0.5px;
+    font-weight: 800; font-size: 16px; letter-spacing: -0.5px;
     background: linear-gradient(135deg, #FFF 30%, #E5A995 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   }
@@ -39,57 +40,57 @@
   .nav-links a { color: rgba(255, 255, 255, 0.5); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: all 0.3s ease; }
   .nav-links a:hover { color: #E5A995; text-shadow: 0 0 12px rgba(229, 169, 149, 0.4); }
   
-  /* Ultra-Bada Hero Layout Framework (Inspired by Harsh) */
+  /* Bada Hero Frame Setup (Inspired by Harsh Layouts) */
   .hero { 
     position: relative; z-index: 10; min-height: 100vh; 
     display: flex; flex-direction: column; justify-content: center; 
     padding: 0 80px; padding-top: 140px; padding-bottom: 80px;
-    max-w: 1300px; margin: 0 auto; gap: 48px;
+    max-w: 1340px; margin: 0 auto; gap: 54px;
   }
   .hero-row {
-    display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 64px; items: center; width: 100%;
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; items: center; width: 100%;
   }
   .hero-content { display: flex; flex-direction: column; align-items: flex-start; }
   
-  .badge-live { display: inline-flex; align-items: center; gap: 8px; background: rgba(229, 169, 149, 0.05); border: 1px solid rgba(229, 169, 149, 0.2); padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; color: #E5A995; tracking: 0.5px; margin-bottom: 24px; text-transform: uppercase; }
+  .badge-live { display: inline-flex; align-items: center; gap: 8px; background: rgba(229, 169, 149, 0.06); border: 1px solid rgba(229, 169, 149, 0.2); padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; color: #E5A995; tracking: 0.5px; margin-bottom: 24px; text-transform: uppercase; }
   .badge-dot { width: 6px; height: 6px; background: #E5A995; border-radius: 50%; animation: pulse-glow 2s infinite; }
   @keyframes pulse-glow { 0% { transform: scale(0.9); opacity: 0.6; } 50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 12px #E5A995; } 100% { transform: scale(0.9); opacity: 0.6; } }
   
-  .name-line { font-size: 64px; font-weight: 800; margin-bottom: 20px; letter-spacing: -2.5px; line-height: 1.1; }
+  .name-line { font-size: 68px; font-weight: 800; margin-bottom: 20px; letter-spacing: -2.5px; line-height: 1.05; }
   .name-line span { background: linear-gradient(90deg, #FFF 40%, #E5A995 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   
-  .typing-wrap { font-size: 26px; font-weight: 600; color: #E5A995; height: 40px; margin-bottom: 24px; display: flex; align-items: center; }
+  .typing-wrap { font-size: 26px; font-weight: 600; color: #E5A995; height: 40px; margin-bottom: 26px; display: flex; align-items: center; }
   .cursor { display: inline-block; width: 2.5px; height: 26px; background: #E5A995; margin-left: 5px; animation: blink 0.8s step-end infinite; }
   @keyframes blink { 50% { opacity: 0 } }
   
   .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-primary { padding: 16px 36px; background: #E5A995; border: none; border-radius: 12px; color: #08080a; font-size: 14.5px; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; }
+  .btn-primary { padding: 16px 36px; background: #E5A995; border: none; border-radius: 12px; color: #060608; font-size: 14.5px; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; }
   .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(229, 169, 149, 0.25); background: #f5c2b3; }
   .btn-secondary { padding: 16px 36px; background: transparent; border: 1.5px solid rgba(229, 169, 149, 0.4); border-radius: 12px; color: #E5A995; font-size: 14.5px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; text-decoration: none; display: inline-block; }
   .btn-secondary:hover { background: rgba(229, 169, 149, 0.04); border-color: #E5A995; transform: translateY(-2px); }
   
-  /* Bada Cinematic Video Section Frame Component (Harsh Layout Style) */
+  /* Harsh-Style Big Presentation Video Element */
   .hero-illustration { width: 100%; display: flex; justify-content: center; }
-  .video-container { position: relative; width: 100%; min-width: 440px; background: rgba(12, 12, 15, 0.8); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 28px; padding: 14px; box-shadow: 0 40px 80px rgba(0,0,0,0.7); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(20px); }
-  .video-container:hover { transform: translateY(-6px); box-shadow: 0 50px 100px rgba(229, 169, 149, 0.18); border-color: rgba(229, 169, 149, 0.4); }
+  .video-container { position: relative; width: 100%; min-width: 480px; background: rgba(10, 10, 12, 0.85); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 28px; padding: 14px; box-shadow: 0 40px 80px rgba(0,0,0,0.8); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(20px); }
+  .video-container:hover { transform: translateY(-6px); box-shadow: 0 50px 100px rgba(229, 169, 149, 0.2); border-color: rgba(229, 169, 149, 0.4); }
   .video-frame-wrapper { width: 100%; aspect-ratio: 16/9; border-radius: 18px; overflow: hidden; background: #000; }
   .video-frame-wrapper video { width: 100%; height: 100%; object-fit: cover; }
-  .video-tagline { font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 12px; text-align: center; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+  .video-tagline { font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 12px; text-align: center; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
   
-  /* Dynamic Numbers Scoreboard Grid (Inspired by Sayan Gupta) */
+  /* Sayan Gupta-Style Statistical Metric Row */
   .metrics-dashboard { width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); padding: 32px; border-radius: 24px; backdrop-filter: blur(16px); margin-top: 24px; }
   .dashboard-stat { text-align: center; position: relative; }
   .dashboard-stat:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 15%; height: 70%; width: 1px; background: rgba(255, 255, 255, 0.05); }
-  .dashboard-num { font-size: 36px; font-weight: 800; color: #E5A995; margin-bottom: 4px; tracking: -0.5px; }
+  .dashboard-num { font-size: 38px; font-weight: 800; color: #E5A995; margin-bottom: 4px; tracking: -0.5px; }
   .dashboard-lbl { font-size: 11px; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
   
-  /* Sections Basic Settings */
-  section { padding: 120px 80px; position: relative; z-index: 10; max-w: 1300px; margin: 0 auto; }
-  .section-heading { font-size: 38px; font-weight: 800; text-align: center; letter-spacing: -1px; margin-bottom: 14px; }
+  /* Section Base Bounds */
+  section { padding: 120px 80px; position: relative; z-index: 10; max-w: 1340px; margin: 0 auto; }
+  .section-heading { font-size: 40px; font-weight: 800; text-align: center; letter-spacing: -1px; margin-bottom: 14px; }
   .section-heading span { background: linear-gradient(90deg, #FFF 30%, #E5A995 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .section-sub { text-align: center; color: rgba(255, 255, 255, 0.4); font-size: 15px; margin-bottom: 72px; }
   
-  /* About Layout Module */
+  /* Profiles Details Section */
   .intro { display: flex; align-items: center; gap: 60px; border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .intro-text { flex: 1; }
   .intro-para { color: rgba(255, 255, 255, 0.65); font-size: 16px; line-height: 1.9; margin-bottom: 24px; }
@@ -99,7 +100,7 @@
   .pill { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 6px 18px; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.7); }
   .pill.purple { background: rgba(229, 169, 149, 0.06); border-color: rgba(229, 169, 149, 0.2); color: #E5A995; font-weight: 600; }
   
-  /* Extended Comprehensive Toolkit Matrix Grid (All Skills Integrated) */
+  /* Consolidated Product Matrix Block Matrix Display (Sayan Layout Core) */
   .skills { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .skills-matrix-wrapper { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .skill-block { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 32px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(10px); }
@@ -108,10 +109,10 @@
   .block-tags { display: flex; flex-wrap: wrap; gap: 8px; }
   .block-tag { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 8px; padding: 6px 12px; font-size: 12px; color: rgba(255, 255, 255, 0.6); font-weight: 500; }
   
-  /* Airtribe Certification Display Tracks Component */
+  /* Airtribe Certification Grid Links Framework */
   .credentials-hub { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .cert-card { background: linear-gradient(145deg, rgba(255,255,255,0.005) 0%, rgba(229,169,149,0.005) 100%); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; padding: 32px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; backdrop-filter: blur(12px); min-height: 200px; }
+  .cert-card { background: linear-gradient(145deg, rgba(255,255,255,0.005) 0%, rgba(229,169,149,0.005) 100%); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; padding: 32px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; backdrop-filter: blur(12px); min-height: 210px; }
   .cert-card:hover { border-color: rgba(229, 169, 149, 0.3); transform: scale(1.02); background: rgba(229, 169, 149, 0.03); box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
   .cert-authority { font-size: 10px; font-weight: 700; color: #E5A995; text-transform: uppercase; tracking: 1px; margin-bottom: 10px; }
   .cert-name { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.4; }
@@ -120,7 +121,7 @@
   .cert-link-btn { position: absolute; bottom: 28px; right: 32px; font-size: 12px; color: #E5A995; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 4px; transition: all 0.2s; }
   .cert-link-btn:hover { color: #fff; text-shadow: 0 0 10px #E5A995; }
   
-  /* Asymmetric Projects Layout Grid System (Inspired by Sayan Gupta) */
+  /* Asymmetric Portfolios Grid Platform Blocks */
   .projects { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .project-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 24px; padding: 36px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; display: flex; flex-direction: column; backdrop-filter: blur(12px); }
@@ -141,15 +142,15 @@
   .chip { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 8px; padding: 4px 10px; font-size: 10.5px; color: rgba(255, 255, 255, 0.4); font-weight: 500; }
   .card-links { display: flex; gap: 10px; margin-top: 12px; }
   .card-link { font-size: 11.5px; color: #E5A995; text-decoration: none; background: rgba(229, 169, 149, 0.05); border: 1px solid rgba(229, 169, 149, 0.15); border-radius: 8px; padding: 8px 16px; font-weight: 700; transition: all 0.2s; width: 100%; text-align: center; tracking: 0.2px; }
-  .card-link:hover { background: #E5A995; color: #08080a; }
-  .featured-badge { position: absolute; top: 14px; right: 14px; background: linear-gradient(135deg, #FFF, #E5A995); border-radius: 5px; padding: 4px 10px; font-size: 9px; font-weight: 800; color: #08080a; letter-spacing: 0.5px; }
+  .card-link:hover { background: #E5A995; color: #060608; }
+  .featured-badge { position: absolute; top: 14px; right: 14px; background: linear-gradient(135deg, #FFF, #E5A995); border-radius: 5px; padding: 4px 10px; font-size: 9px; font-weight: 800; color: #060608; letter-spacing: 0.5px; }
   
   /* Experience Layout Matrix Timeline Component */
   .experience-section { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .timeline-container { max-w: 900px; margin: 0 auto; position: relative; padding-left: 40px; }
   .timeline-container::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: rgba(255, 255, 255, 0.08); }
   .timeline-item { position: relative; }
-  .timeline-dot { position: absolute; left: -45px; top: 5px; width: 11px; height: 11px; border-radius: 50%; background: #E5A995; border: 3px solid #08080a; box-shadow: 0 0 10px #E5A995; }
+  .timeline-dot { position: absolute; left: -45px; top: 5px; width: 11px; height: 11px; border-radius: 50%; background: #E5A995; border: 3px solid #060608; box-shadow: 0 0 10px #E5A995; }
   .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
   .exp-title { font-size: 19px; font-weight: 700; color: #fff; tracking: -0.2px; }
   .exp-company { font-size: 15px; color: #E5A995; font-weight: 600; margin-bottom: 16px; }
@@ -158,7 +159,7 @@
   .exp-bullets li { font-size: 14px; color: rgba(255, 255, 255, 0.6); line-height: 1.85; margin-bottom: 12px; position: relative; padding-left: 18px; }
   .exp-bullets li::before { content: '•'; position: absolute; left: 0; color: #E5A995; font-weight: 700; }
 
-  /* Contact Strategy Connections Panel form */
+  /* Interactive Form Contacts Layout Box */
   .contact { border-top: 1px solid rgba(255, 255, 255, 0.04); text-align: center; padding-bottom: 120px; }
   .contact-cards { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
   .contact-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 18px; padding: 22px 26px; min-width: 160px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; backdrop-filter: blur(8px); }
@@ -175,12 +176,12 @@
   .form-textarea { width: 100%; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 14px 18px; font-size: 13.5px; color: #fff; font-family: inherit; outline: none; resize: none; height: 120px; transition: border-color 0.3s ease; margin-bottom: 14px; }
   .form-textarea::placeholder { color: rgba(255, 255, 255, 0.25); }
   .form-textarea:focus { border-color: rgba(229, 169, 149, 0.4); }
-  .btn-send { width: 100%; padding: 14px; background: #E5A995; border: none; border-radius: 10px; color: #08080a; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.3s ease; }
+  .btn-send { width: 100%; padding: 14px; background: #E5A995; border: none; border-radius: 10px; color: #060608; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.3s ease; }
   .btn-send:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(229, 169, 149, 0.2); background: #f5c2b3; }
   
   .footer { text-align: center; padding: 36px; color: rgba(255, 255, 255, 0.15); font-size: 12.5px; border-top: 1px solid rgba(255, 255, 255, 0.03); position: relative; z-index: 10; font-weight: 500; }
   
-  /* Scroll Reveal Base Classes */
+  /* On-Scroll Fade Slide Reveals */
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
   .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -206,8 +207,8 @@
 </head>
 <body>
 
-<!-- DIGITAL DATA NETWORK STREAMS BACKGROUND OVERLAY -->
-<canvas id="dynamic-grid-bg"></canvas>
+<!-- DIGITAL INTERACTIVE ABSTRACT DATA GRID CANVAS CORE -->
+<canvas id="neural-canvas"></canvas>
 
 <nav>
   <div class="logo">MANISHA.PM</div>
@@ -219,17 +220,17 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
-    <!-- Safe underscore routing implementation for file path parsing -->
+    <!-- Secure exact underscore alignment to bypass 404 blockages[cite: 2] -->
     <li><a href="./Manisha_Agarwal_PM_Resume.pdf" target="_blank" style="color: #E5A995; font-weight: 600;">Resume</a></li>
   </ul>
 </nav>
 
-<!-- HERO LAYOUT AREA -->
+<!-- HERO CORE PANEL -->
 <section class="hero" id="home">
   <div class="hero-row">
     <div class="hero-content">
-      <div class="badge-live"><div class="badge-dot"></div>Open for APM / PM Mandates</div>
-      <div class="name-line">Building <span>Intelligent AI</span> Products.</div>
+      <div class="badge-live"><div class="badge-dot"></div>AI-Focused Product Manager Candidate[cite: 2]</div>
+      <div class="name-line">Building <span>Intelligent AI</span> Products[cite: 2].</div>
       <div class="typing-wrap"><span id="typing"></span><span class="cursor"></span></div>
       
       <div class="hero-btns">
@@ -238,7 +239,7 @@
       </div>
     </div>
     
-    <!-- Expanded Cinematic Presentation Card Container Frame -->
+    <!-- Harsh-Style Big Presentation Video Area Box -->
     <div class="hero-illustration">
       <div class="video-container">
         <div class="video-frame-wrapper">
@@ -247,12 +248,12 @@
             Your browser does not support the video tag.
           </video>
         </div>
-        <div class="video-tagline">Video Briefing: Core Analytics & Execution Strategy</div>
+        <div class="video-tagline">Video Briefing: Analytical Instincts & Product Logic Loops</div>
       </div>
     </div>
   </div>
   
-  <!-- Quantitative Impact Scoreboard Dashboard Row -->
+  <!-- Quantitative Impact Board Elements (Sayan Layout Core) -->
   <div class="metrics-dashboard">
     <div class="dashboard-stat"><div class="dashboard-num">5+ Yrs</div><div class="dashboard-lbl">At Cognizant[cite: 2]</div></div>
     <div class="dashboard-stat"><div class="dashboard-num">62%</div><div class="dashboard-lbl">Profile Fraud Isolated[cite: 2]</div></div>
@@ -261,7 +262,7 @@
   </div>
 </section>
 
-<!-- ABOUT DEEP PROFILE SUMMARY DETAILS -->
+<!-- ABOUT PROFILE BREAKDOWN SUMMARY -->
 <section class="intro reveal" id="about">
   <div class="intro-text">
     <div class="section-heading" style="text-align: left; margin-bottom: 24px;">LET ME <span>INTRODUCE</span> MYSELF</div>
@@ -277,7 +278,7 @@
   </div>
 </section>
 
-<!-- COMPREHENSIVE SKILLS BLOCKS EXPANDED SYSTEM MATRIX (Harsh & Sayan Style) -->
+<!-- COMPREHENSIVE SKILLS MATRIX BLOCKS (All Skills Restructured) -->
 <section class="skills reveal" id="skills">
   <div class="section-heading">PRODUCT <span>TOOLKITS</span></div>
   <div class="section-sub">The execution layers, analysis architectures, and frameworks I apply to cross product bottlenecks[cite: 2]</div>
@@ -315,7 +316,7 @@
   </div>
 </section>
 
-<!-- AIRTRIBE COMPREHENSIVE CERTIFICATIONS HUBS -->
+<!-- AIRTRIBE OFFICIAL ACTIVE LICENSES GRID HUB -->
 <section class="credentials-hub reveal" id="credentials">
   <div class="section-heading">LICENSES & <span>CERTIFICATIONS</span></div>
   <div class="section-sub">Active product track credentials earned across verified Airtribe education systems[cite: 2]</div>
@@ -347,7 +348,7 @@
   </div>
 </section>
 
-<!-- ASYMMETRIC LARGE PROJECTS CASE GRID (Sayan Layout Core) -->
+<!-- PORTFOLIO CASES GRIDS MATRIX (Sayan Layout Core Style) -->
 <section class="projects reveal" id="projects">
   <div class="section-heading">CASE ESSAYS & <span>PROTOTYPES</span></div>
   <div class="section-sub">Deep behavioral analysis mapping target metric changes across high-volume platforms[cite: 2]</div>
@@ -374,7 +375,7 @@
       <span class="card-emoji">🕯️</span><div class="card-tag pink">Interaction Choreography</div>
       <div class="card-title">Candlelit – Component Feedback Sandbox</div>
       <div class="card-desc">Designed and deployed an active layout environment to validate state updates, component choreography patterns, and visual animations.</div>
-      <div class="card-metrics">
+      . <div class="card-metrics">
         <div class="metric">Built clean interface configurations for flawless viewport switching.</div>
         <div class="metric">Minimized multi-step pipeline actions to streamline checkout loops.</div>
         <div class="metric">Published functional, live layout system modules utilizing GitHub Pages.</div>
@@ -436,7 +437,7 @@
   </div>
 </section>
 
-<!-- PROFESSIONAL TIMELINE CONTAINER SECTION -->
+<!-- PROFESSIONAL EXPERIENCES LINES TIMELINE -->
 <section class="experience-section reveal" id="experience">
   <div class="section-heading">PROFESSIONAL <span>EXPERIENCE</span></div>
   <div class="section-sub">Over five years directing high-volume platform accounts and AI evaluation standards[cite: 2]</div>
@@ -460,7 +461,7 @@
   </div>
 </section>
 
-<!-- CONTACT CONNECTIONS PLATFORM FORM -->
+<!-- CONNECTION FORMS PANEL -->
 <section class="contact reveal" id="contact">
   <div class="section-heading">CONNECT WITH <span>MANISHA</span></div>
   <div class="section-sub">Open to APM/PM assignments, platform strategy discussions, or high-fidelity prototype reviews ☕</div>
@@ -492,115 +493,117 @@
 
 <div class="footer">© 2026 Manisha Agarwal · AI-First Product Manager · Crafted with analytical depth and intention ✨</div>
 
-<!-- DIGITAL CANVAS NETWORKS ALIVE LOGIC ENGINE -->
+<!-- HIGHLY INTERACTIVE BACKGROUND ANIMATION ENGINE SCRIPTS -->
 <script>
   /* 
-     INTERACTIVE GEOMETRIC NETWORK STREAMS BACKGROUND ENGINE
-     Spins up a high-end data field layer that generates line nodes dynamically mapped to cursor positions.
+     NEURAL ABSTRACT DATA GRID + CURSOR VAPOR Licht ENGINE
+     Generates random digital coordinates alongside an active glowing mouse smoke flow pattern.
   */
-  const canvas = document.getElementById('dynamic-grid-bg');
+  const canvas = document.getElementById('neural-canvas');
   const ctx = canvas.getContext('2d');
   
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
+  let w = canvas.width = window.innerWidth;
+  let h = canvas.height = window.innerHeight;
   
-  let points = [];
-  const maxPoints = window.innerWidth < 768 ? 40 : 105;
-  const targetDistance = 120;
-  let mouse = { x: null, y: null, radius: 180 };
+  let particles = [];
+  let trail = [];
+  const maxParticles = window.innerWidth < 768 ? 30 : 80;
+  let mouse = { x: null, y: null };
 
   window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
   });
 
   window.addEventListener('mousemove', (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
+    
+    // Push coordinate strings to the vapor trail
+    trail.push({ x: mouse.x, y: mouse.y, alpha: 1.0 });
+    if(trail.length > 25) trail.shift();
   });
 
-  window.addEventListener('mouseleave', () => {
-    mouse.x = null;
-    mouse.y = null;
-  });
+  window.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
 
-  class Point {
+  class Particle {
     constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.35;
-      this.vy = (Math.random() - 0.5) * 0.35;
-      this.radius = Math.random() * 1.6 + 1;
+      this.x = Math.random() * w;
+      this.y = Math.random() * h;
+      this.speed = Math.random() * 0.2 + 0.1;
+      this.angle = Math.random() * Math.PI * 2;
+      this.size = Math.random() * 2 + 1;
     }
     update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < 0 || this.x > width) this.vx *= -1;
-      if (this.y < 0 || this.y > height) this.vy *= -1;
+      this.x += Math.cos(this.angle) * this.speed;
+      this.y += Math.sin(this.angle) * this.speed;
       
-      // Magnetic cursor tracking calculations
-      if (mouse.x !== null && mouse.y !== null) {
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < mouse.radius) {
-          let force = (mouse.radius - dist) / mouse.radius;
-          this.x -= dx * force * 0.025;
-          this.y -= dy * force * 0.025;
-        }
-      }
+      if(this.x < 0 || this.x > w) this.angle = Math.PI - this.angle;
+      if(this.y < 0 || this.y > h) this.angle = -this.angle;
     }
     draw() {
       ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(229, 169, 149, 0.25)';
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(229, 169, 149, 0.15)';
       ctx.fill();
     }
   }
 
-  for (let i = 0; i < maxPoints; i++) {
-    points.push(new Point());
-  }
+  for(let i=0; i<maxParticles; i++) particles.push(new Particle());
 
-  function animateNetwork() {
-    ctx.clearRect(0, 0, width, height);
+  function drawEngine() {
+    ctx.clearRect(0,0,w,h);
     
-    // Ambient color glow mapping under cursor elements
-    if (mouse.x !== null && mouse.y !== null) {
-      let radialGlow = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 260);
-      radialGlow.addColorStop(0, 'rgba(229, 169, 149, 0.04)');
-      radialGlow.addColorStop(1, 'transparent');
-      ctx.fillStyle = radialGlow;
-      ctx.fillRect(0, 0, width, height);
+    // 1. Render Tech Geometric Coordinates Grid Overlay
+    ctx.strokeStyle = 'rgba(255,255,255,0.012)';
+    ctx.lineWidth = 1;
+    let gridSize = 60;
+    for(let x=0; x<w; x+=gridSize) {
+      ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,h); ctx.stroke();
+    }
+    for(let y=0; y<h; y+=gridSize) {
+      ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke();
     }
 
-    // Trace network geometric vectors
-    for (let i = 0; i < points.length; i++) {
-      points[i].update();
-      points[i].draw();
+    // 2. Render Active Fluid Aurora Light Smoke Trail
+    for(let i=0; i<trail.length; i++) {
+      let t = trail[i];
+      t.alpha -= 0.04;
+      if(t.alpha <= 0) continue;
       
-      for (let j = i + 1; j < points.length; j++) {
-        let dx = points[i].x - points[j].x;
-        let dy = points[i].y - points[j].y;
-        let dist = Math.sqrt(dx*dx + dy*dy);
-        
-        if (dist < targetDistance) {
+      let gradient = ctx.createRadialGradient(t.x, t.y, 2, t.x, t.y, 140 - (t.alpha * 40));
+      gradient.addColorStop(0, `rgba(229, 169, 149, ${t.alpha * 0.05})`);
+      gradient.addColorStop(1, 'transparent');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0,0,w,h);
+    }
+
+    // 3. Render and Link Floating Nodes
+    for(let i=0; i<particles.length; i++) {
+      let p = particles[i];
+      p.update();
+      p.draw();
+      
+      // Connect nodes nearby
+      for(let j=i+1; j<particles.length; j++) {
+        let p2 = particles[j];
+        let d = Math.sqrt((p.x - p2.x)**2 + (p.y - p2.y)**2);
+        if(d < 130) {
           ctx.beginPath();
-          ctx.moveTo(points[i].x, points[i].y);
-          ctx.lineTo(points[j].x, points[j].y);
-          let alpha = (targetDistance - dist) / targetDistance * 0.15;
-          ctx.strokeStyle = `rgba(229, 169, 149, ${alpha})`;
-          ctx.lineWidth = 0.65;
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = `rgba(229, 169, 149, ${(130 - d)/130 * 0.08})`;
+          ctx.lineWidth = 0.5;
           ctx.stroke();
         }
       }
     }
-    requestAnimationFrame(animateNetwork);
+    requestAnimationFrame(drawEngine);
   }
-  animateNetwork();
-  
-  /* Running loop header subheader scripts animation pipeline */
-  const roles = ['AI-First Product Manager', 'User Discovery & Data Strategist', 'RICE Feature Prioritisation Expert', 'Rapid Functional Prototyper'];
+  drawEngine();
+
+  /* Text pipeline configurations loops animation */
+  const roles = ['AI-First Product Manager', 'User Discovery & Data Strategist', 'RICE Feature Prioritisation Expert', 'Functional Interactive Prototyper'];
   let ri = 0, ci = 0, del = false;
   const el = document.getElementById('typing');
   function type() {
@@ -611,28 +614,17 @@
   }
   type();
   
-  /* Scroll Element Reveal Monitors scripts calculation checks */
+  /* On Scroll Slide Up Observer Reveals */
   function reveal() {
     const reveals = document.querySelectorAll('.reveal');
     reveals.forEach(el => {
       const windowHeight = window.innerHeight;
       const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 100;
-      if (elementTop < windowHeight - elementVisible) {
-        el.classList.add('active');
-      }
+      if (elementTop < windowHeight - 100) el.classList.add('active');
     });
   }
   window.addEventListener('scroll', reveal);
-  reveal(); // Run confirmation scripts validation
-  
-  /* Message submit actions script layout changes */
-  document.getElementById('sendBtn').addEventListener('click', function() {
-    this.textContent = 'Message Dispatched! ✨';
-    this.style.background = 'linear-gradient(135deg, #2e7d32, #4caf50)';
-    this.style.color = '#fff';
-    setTimeout(() => { this.textContent = 'Send Message ↗'; this.style.background = ''; this.style.color = ''; }, 3000);
-  });
+  reveal();
 </script>
 </body>
 </html>
