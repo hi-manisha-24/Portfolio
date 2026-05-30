@@ -10,31 +10,30 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background: #0b0b0d;
+    background: #08080a;
     color: #FBF9F6;
     min-height: 100vh;
     overflow-x: hidden;
   }
   
-  /* ADVANCED ALIVE CANVAS INTERACTION BACKGROUND */
-  #interactive-mesh-bg {
+  /* CYBER GLOW & DYNAMIC STREAM INTERACTIVE ENGINE BACKGROUND */
+  #fluid-matrix-bg {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.85;
   }
 
-  /* Flat Minimalistic Glass Navigation System */
+  /* Flat Glass Navigation Framework */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
-    padding: 18px 60px; background: rgba(11, 11, 13, 0.65);
+    padding: 18px 60px; background: rgba(8, 8, 10, 0.7);
     backdrop-filter: blur(30px); border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   }
   .logo {
-    font-weight: 800; font-size: 16px; tracking: -0.5px;
+    font-weight: 800; font-size: 16px; letter-spacing: -0.5px;
     background: linear-gradient(135deg, #FFF 30%, #E5A995 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   }
@@ -42,14 +41,14 @@
   .nav-links a { color: rgba(255, 255, 255, 0.55); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: all 0.3s; }
   .nav-links a:hover { color: #E5A995; text-shadow: 0 0 15px rgba(229, 169, 149, 0.4); }
   
-  /* Hero Infrastructure Setup */
+  /* Hero Section Component */
   .hero { position: relative; z-index: 10; min-height: 100vh; display: flex; align-items: center; padding: 0 60px; padding-top: 80px; gap: 60px; max-w: 1240px; margin: 0 auto; }
   .hero-content { flex: 1.2; }
-  .badge-live { display: inline-flex; align-items: center; gap: 8px; background: rgba(229, 169, 149, 0.05); border: 1px solid rgba(229, 169, 149, 0.2); padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; color: #E5A995; letter-spacing: 0.5px; margin-bottom: 16px; text-transform: uppercase; }
+  .badge-live { display: inline-flex; align-items: center; gap: 8px; background: rgba(229, 169, 149, 0.05); border: 1px solid rgba(229, 169, 149, 0.2); padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; color: #E5A995; letter-spacing: 0.5px; margin-bottom: 18px; text-transform: uppercase; }
   .badge-dot { width: 6px; height: 6px; background: #E5A995; border-radius: 50%; animation: pulse-glow 2s infinite; }
   @keyframes pulse-glow { 0% { transform: scale(0.9); opacity: 0.6; } 50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 12px #E5A995; } 100% { transform: scale(0.9); opacity: 0.6; } }
   
-  .name-line { font-size: 54px; font-weight: 800; margin-bottom: 16px; letter-spacing: -1.5px; line-height: 1.15; }
+  .name-line { font-size: 56px; font-weight: 800; margin-bottom: 16px; letter-spacing: -2px; line-height: 1.1; }
   .name-line span { background: linear-gradient(90deg, #FFF 40%, #E5A995 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   
   .typing-wrap { font-size: 24px; font-weight: 600; color: #E5A995; height: 38px; margin-bottom: 24px; display: flex; align-items: center; }
@@ -58,69 +57,69 @@
   
   .ai-tools { display: flex; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
   .ai-label { font-size: 10px; color: rgba(255, 255, 255, 0.35); margin-right: 4px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
-  .ai-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 20px; padding: 5px 14px; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.7); transition: all 0.3s; }
+  .ai-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 5px 14px; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.7); transition: all 0.3s; }
   .ai-chip:hover { background: rgba(229, 169, 149, 0.08); border-color: rgba(229, 169, 149, 0.3); color: #fff; transform: translateY(-2px); }
   
   .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-primary { padding: 14px 30px; background: #E5A995; border: none; border-radius: 10px; color: #0d0d0f; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; }
+  .btn-primary { padding: 14px 30px; background: #E5A995; border: none; border-radius: 10px; color: #08080a; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; }
   .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(229, 169, 149, 0.25); background: #f5c2b3; }
   .btn-secondary { padding: 14px 30px; background: transparent; border: 1.5px solid rgba(229, 169, 149, 0.4); border-radius: 10px; color: #E5A995; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); font-family: inherit; text-decoration: none; display: inline-block; }
   .btn-secondary:hover { background: rgba(229, 169, 149, 0.04); border-color: #E5A995; transform: translateY(-2px); }
   
-  /* Hero Media Introduction Container Box component */
+  /* Upgraded Video Sandbox Container Component */
   .hero-illustration { flex: 0.9; display: flex; justify-content: center; align-items: center; }
-  .video-container { position: relative; width: 100%; max-width: 420px; background: rgba(15, 15, 18, 0.7); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 24px; padding: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.6); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(10px); }
-  .video-container:hover { transform: translateY(-4px); box-shadow: 0 40px 80px rgba(229, 169, 149, 0.15); border-color: rgba(229, 169, 149, 0.3); }
-  .video-frame-wrapper { width: 100%; aspect-ratio: 16/9; border-radius: 14px; overflow: hidden; background: #000; }
+  .video-container { position: relative; width: 100%; max-width: 420px; background: rgba(10, 10, 12, 0.8); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 24px; padding: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.6); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); backdrop-filter: blur(15px); }
+  .video-container:hover { transform: translateY(-4px); box-shadow: 0 40px 80px rgba(229, 169, 149, 0.18); border-color: rgba(229, 169, 149, 0.35); }
+  .video-frame-wrapper { width: 100%; aspect-ratio: 16/9; border-radius: 14px; overflow: hidden; background: #000; box-shadow: inset 0 0 20px rgba(0,0,0,0.8); }
   .video-frame-wrapper video { width: 100%; height: 100%; object-fit: cover; }
-  .video-tagline { font-size: 11px; color: rgba(255, 255, 255, 0.4); margin-top: 10px; text-align: center; font-weight: 500; font-style: italic; }
+  .video-tagline { font-size: 11px; color: rgba(255, 255, 255, 0.4); margin-top: 10px; text-align: center; font-weight: 600; letter-spacing: 0.2px; }
   
-  /* Sections General Parameters */
+  /* Sections Basic Settings */
   section { padding: 100px 60px; position: relative; z-index: 10; max-w: 1240px; margin: 0 auto; }
-  .section-heading { font-size: 32px; font-weight: 800; text-align: center; tracking: -0.5px; margin-bottom: 12px; }
+  .section-heading { font-size: 34px; font-weight: 800; text-align: center; letter-spacing: -0.5px; margin-bottom: 12px; }
   .section-heading span { background: linear-gradient(90deg, #FFF 30%, #E5A995 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .section-sub { text-align: center; color: rgba(255, 255, 255, 0.4); font-size: 14px; margin-bottom: 60px; }
   
-  /* Translucent Analytics Dashboard Banner */
+  /* Micro-Metrics Metric Board Components */
   .metrics-dashboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 40px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); padding: 26px; border-radius: 20px; backdrop-filter: blur(16px); }
   .dashboard-stat { text-align: center; position: relative; }
   .dashboard-stat:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 15%; height: 70%; width: 1px; background: rgba(255, 255, 255, 0.05); }
   .dashboard-num { font-size: 32px; font-weight: 800; color: #E5A995; margin-bottom: 4px; tracking: -0.5px; }
   .dashboard-lbl { font-size: 11px; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
   
-  /* About Layout Module */
+  /* About Section Component */
   .intro { display: flex; align-items: center; gap: 60px; border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .intro-text { flex: 1; }
-  .intro-para { color: rgba(255, 255, 255, 0.65); font-size: 15px; line-height: 1.85; margin-bottom: 20px; }
+  .intro-para { color: rgba(255, 255, 255, 0.65); font-size: 15px; line-height: 1.9; margin-bottom: 22px; font-weight: 400; }
   .intro-para .hi { color: #fff; font-weight: 600; }
   .intro-para .accent { color: #E5A995; font-weight: 600; }
   .skill-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-  .pill { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 20px; padding: 6px 16px; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.7); }
-  .pill.purple { background: rgba(229, 169, 149, 0.05); border-color: rgba(229, 169, 149, 0.18); color: #E5A995; font-weight: 600; }
+  .pill { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 6px 16px; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.7); }
+  .pill.purple { background: rgba(229, 169, 149, 0.06); border-color: rgba(229, 169, 149, 0.2); color: #E5A995; font-weight: 600; }
   
-  /* Advanced Toolkit Matrix Grid */
+  /* Advanced Skills Grid System Layout */
   .skills { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .skill-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 16px; padding: 26px 20px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); text-align: center; backdrop-filter: blur(8px); }
-  .skill-card:hover { background: rgba(229, 169, 149, 0.02); border-color: rgba(229, 169, 149, 0.22); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+  .skill-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 16px; padding: 26px 20px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); text-align: center; backdrop-filter: blur(10px); }
+  .skill-card:hover { background: rgba(229, 169, 149, 0.02); border-color: rgba(229, 169, 149, 0.25); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
   .skill-icon { font-size: 28px; margin-bottom: 12px; }
   .skill-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 12px; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
   .skill-tag { background: rgba(255, 255, 255, 0.02); border-radius: 8px; padding: 4px 10px; font-size: 10.5px; color: rgba(255, 255, 255, 0.4); font-weight: 500; }
   
-  /* Credential & Verification Hub Component */
+  /* Premium Certification Layout Track */
   .credentials-hub { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .cert-card { background: linear-gradient(145deg, rgba(255,255,255,0.005) 0%, rgba(229,169,149,0.005) 100%); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 24px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; backdrop-filter: blur(10px); }
-  .cert-card:hover { border-color: rgba(229, 169, 149, 0.25); transform: scale(1.02); background: rgba(229, 169, 149, 0.02); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+  .cert-card { background: linear-gradient(145deg, rgba(255,255,255,0.005) 0%, rgba(229,169,149,0.005) 100%); border: 1px solid rgba(255,255,255,0.03); border-radius: 16px; padding: 26px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; backdrop-filter: blur(12px); }
+  .cert-card:hover { border-color: rgba(229, 169, 149, 0.3); transform: scale(1.02); background: rgba(229, 169, 149, 0.03); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
   .cert-authority { font-size: 10px; font-weight: 700; color: #E5A995; text-transform: uppercase; tracking: 1px; margin-bottom: 8px; }
-  .cert-name { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 6px; line-height: 1.3; }
-  .cert-date { font-size: 11.5px; color: rgba(255,255,255,0.35); margin-bottom: 14px; font-weight: 500; }
-  .cert-tag-pill { display: inline-block; background: rgba(255,255,255,0.02); border-radius: 5px; padding: 2px 8px; font-size: 10px; color: rgba(255,255,255,0.45); font-weight: 600; margin-top: auto; align-self: flex-start; }
-  .cert-link-btn { position: absolute; bottom: 20px; right: 24px; font-size: 11px; color: #E5A995; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 4px; transition: color 0.2s; }
+  .cert-name { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.35; }
+  .cert-date { font-size: 11.5px; color: rgba(255,255,255,0.35); margin-bottom: 16px; font-weight: 500; }
+  .cert-tag-pill { display: inline-block; background: rgba(255,255,255,0.02); border-radius: 5px; padding: 3px 9px; font-size: 10px; color: rgba(255,255,255,0.45); font-weight: 600; margin-top: auto; align-self: flex-start; }
+  .cert-link-btn { position: absolute; bottom: 22px; right: 26px; font-size: 11px; color: #E5A995; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 4px; transition: all 0.2s; }
   .cert-link-btn:hover { color: #fff; text-shadow: 0 0 10px #E5A995; }
   
-  /* Portfolio Cases Grids Layout */
+  /* Portfolio Core Grids Layout */
   .projects { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .project-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 26px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; display: flex; flex-direction: column; backdrop-filter: blur(12px); }
@@ -141,15 +140,15 @@
   .chip { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 8px; padding: 3px 9px; font-size: 10px; color: rgba(255, 255, 255, 0.4); }
   .card-links { display: flex; gap: 8px; margin-top: 12px; }
   .card-link { font-size: 11px; color: #E5A995; text-decoration: none; background: rgba(229, 169, 149, 0.05); border: 1px solid rgba(229, 169, 149, 0.15); border-radius: 6px; padding: 6px 12px; font-weight: 600; transition: all 0.2s; width: 100%; text-align: center; }
-  .card-link:hover { background: #E5A995; color: #0d0d0f; }
-  .featured-badge { position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #FFF, #E5A995); border-radius: 5px; padding: 3px 9px; font-size: 9px; font-weight: 800; color: #0d0d0f; letter-spacing: 0.5px; }
+  .card-link:hover { background: #E5A995; color: #08080a; }
+  .featured-badge { position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #FFF, #E5A995); border-radius: 5px; padding: 3px 9px; font-size: 9px; font-weight: 800; color: #08080a; letter-spacing: 0.5px; }
   
   /* Experience Layout Matrix Timeline Component */
   .experience-section { border-top: 1px solid rgba(255, 255, 255, 0.04); }
   .timeline-container { max-w: 840px; margin: 0 auto; position: relative; padding-left: 36px; }
   .timeline-container::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: rgba(255, 255, 255, 0.08); }
   .timeline-item { position: relative; }
-  .timeline-dot { position: absolute; left: -41px; top: 5px; width: 11px; height: 11px; border-radius: 50%; background: #E5A995; border: 3px solid #0d0d0f; box-shadow: 0 0 10px #E5A995; }
+  .timeline-dot { position: absolute; left: -41px; top: 5px; width: 11px; height: 11px; border-radius: 50%; background: #E5A995; border: 3px solid #08080a; box-shadow: 0 0 10px #E5A995; }
   .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
   .exp-title { font-size: 18px; font-weight: 700; color: #fff; tracking: -0.2px; }
   .exp-company { font-size: 14px; color: #E5A995; font-weight: 600; margin-bottom: 14px; }
@@ -158,7 +157,7 @@
   .exp-bullets li { font-size: 13.5px; color: rgba(255, 255, 255, 0.6); line-height: 1.8; margin-bottom: 10px; position: relative; padding-left: 16px; }
   .exp-bullets li::before { content: '•'; position: absolute; left: 0; color: #E5A995; font-weight: 700; }
 
-  /* Interactive Form Panel Layouts */
+  /* Interactive Contact Strategy Panel Form */
   .contact { border-top: 1px solid rgba(255, 255, 255, 0.04); text-align: center; padding-bottom: 120px; }
   .contact-cards { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
   .contact-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 16px; padding: 20px 24px; min-width: 150px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 6px; backdrop-filter: blur(8px); }
@@ -175,12 +174,12 @@
   .form-textarea { width: 100%; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 14px 18px; font-size: 13.5px; color: #fff; font-family: inherit; outline: none; resize: none; height: 120px; transition: border-color 0.3s ease; margin-bottom: 14px; }
   .form-textarea::placeholder { color: rgba(255, 255, 255, 0.25); }
   .form-textarea:focus { border-color: rgba(229, 169, 149, 0.4); }
-  .btn-send { width: 100%; padding: 14px; background: #E5A995; border: none; border-radius: 10px; color: #0d0d0f; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.3s ease; }
+  .btn-send { width: 100%; padding: 14px; background: #E5A995; border: none; border-radius: 10px; color: #08080a; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.3s ease; }
   .btn-send:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(229, 169, 149, 0.2); background: #f5c2b3; }
   
   .footer { text-align: center; padding: 30px; color: rgba(255, 255, 255, 0.15); font-size: 12px; border-top: 1px solid rgba(255, 255, 255, 0.03); position: relative; z-index: 10; font-weight: 500; }
   
-  /* Scroll Intercept Reveal Effects styles */
+  /* Scroll Reveal Transitions */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
   .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -205,8 +204,8 @@
 </head>
 <body>
 
-<!-- THE LIVE GEOMETRIC NETWORKS BACKGROUND ENGINE -->
-<canvas id="interactive-mesh-bg"></canvas>
+<!-- THE LIVE HIGH-TECH FLUID CONSTELLATION CANVAS ENGINE -->
+<canvas id="fluid-matrix-bg"></canvas>
 
 <nav>
   <div class="logo">MANISHA.PM</div>
@@ -218,19 +217,20 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="./Manisha_Agarwal_Resume.pdf" target="_blank" style="color: #E5A995; font-weight: 600;">Resume</a></li>
+    <!-- Dynamic Sync Path Fixed with underscores to bypass 404 blockages -->
+    <li><a href="./Manisha_Agarwal_PM_Resume.pdf" target="_blank" style="color: #E5A995; font-weight: 600;">Resume</a></li>
   </ul>
 </nav>
 
 <!-- HERO LAYOUT SECTION -->
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="badge-live"><div class="badge-dot"></div>Open for APM / Product Assignments</div>
+    <div class="badge-live"><div class="badge-dot"></div>APM / Product Management Candidate</div>
     <div class="name-line">Building <span>Intelligent AI</span> Products.</div>
     <div class="typing-wrap"><span id="typing"></span><span class="cursor"></span></div>
     
     <div class="ai-tools">
-      <span class="ai-label">AI Toolstack Integration</span>
+      <span class="ai-label">AI Integration Core</span>
       <div class="ai-chip"><div class="ai-dot" style="background:#E5A995"></div>Claude AI</div>
       <div class="ai-chip"><div class="ai-dot" style="background:#10a37f"></div>ChatGPT</div>
       <div class="ai-chip"><div class="ai-dot" style="background:#6366f1"></div>Lovable</div>
@@ -239,7 +239,8 @@
     
     <div class="hero-btns">
       <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Explore Case Studies ↗</button>
-      <a href="./Manisha_Agarwal_Resume.pdf" target="_blank" download class="btn-secondary">Download Resume</a>
+      <!-- Accurate Download Route Setup -->
+      <a href="./Manisha_Agarwal_PM_Resume.pdf" target="_blank" download class="btn-secondary">Download Resume</a>
     </div>
   </div>
   
@@ -251,19 +252,19 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      <div class="video-tagline">Video Introduction: Analytical Mindsets & Philosophy</div>
+      <div class="video-tagline">Video Introduction: Product Intuition & Logic Loops</div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT BRIEF DETAILS LAYOUT -->
+<!-- ABOUT BRIEF PROFILE DETAILS -->
 <section class="intro reveal" id="about">
   <div class="intro-text">
     <div class="section-heading" style="text-align: left; margin-bottom: 24px;">LET ME <span>INTRODUCE</span> MYSELF</div>
-    <p class="intro-para">I fell in love with <span class="hi">understanding human constraints</span> — turning unstructured qualitative problems into objective product metrics is where I execute best 🌱</p>
-    <p class="intro-para">I ground all product hypotheses in structured <span class="accent">User Discovery & Analytical Insight Loops</span> — tracking data trees to map conversion pipelines accurately.</p>
-    <p class="intro-para">I execute the systematic <span class="accent">RICE framework matrix</span> to strip out non-essential work — sorting operational reach and confidence weights seamlessly.</p>
-    <p class="intro-para">As an <span class="hi">AI-native builder transitioning into PM tracks</span>, I use Claude and Lovable to spin up live interactive modules and rapidly check user journeys[cite: 1].</p>
+    <p class="intro-para">I fell in love with <span class="hi">understanding customer problems</span> — mapping qualitative tracking barriers into data-validated feature requirements is where I execute best[cite: 2].</p>
+    <p class="intro-para">I anchor my frameworks on <span class="accent">User Discovery & Retention Strategy</span> — translating user feedback trends to intercept activation leaks and drop-offs[cite: 2].</p>
+    <p class="intro-para">I run the <span class="accent">RICE prioritization model</span> to sort product initiatives — weighing consumer reach against core engineering effort boundaries[cite: 2].</p>
+    <p class="intro-para">As an <span class="hi">AI-First Product Management candidate transitioning from a non-technical background</span>, I leverage Claude and Lovable to spin up interactive functional sandboxes fast[cite: 2].</p>
     <div class="skill-pills">
       <span class="pill">🔍 Qualitative Discovery Loops</span><span class="pill">⚖️ RICE Feature Prioritisation</span><span class="pill">📋 PRD Architecture v1.0</span>
       <span class="pill purple">🤖 Generative AI Operations</span><span class="pill purple">💬 Prompt Engineering Logic</span><span class="pill purple">🚀 Rapid Interactive Prototyping</span>
@@ -272,12 +273,12 @@
   </div>
 </section>
 
-<!-- PRODUCT SKILLS CORES MATRIX -->
+<!-- SKILLS CORE MATRIX GRID -->
 <section class="skills reveal" id="skills">
   <div class="section-heading">PRODUCT <span>TOOLKITS</span></div>
-  <div class="section-sub">The execution layers, analysis pipelines, and structural frameworks I use to solve friction</div>
+  <div class="section-sub">The frameworks, methodologies, and builder applications I use to ship features[cite: 2]</div>
   <div class="skills-grid">
-    <div class="skill-card"><div class="skill-icon">🔍</div><div class="skill-title">User Discovery</div><div class="skill-tags"><span class="skill-tag">Contextual Interviews</span><span class="skill-tag">JTBD Framework</span><span class="skill-tag">Target Surveys</span><span class="skill-tag">Persona Mapping</span><span class="skill-tag">Usability Testing</span></div></div>
+    <div class="skill-card"><div class="skill-icon">🔍</div><div class="skill-title">User Discovery</div><div class="skill-tags"><span class="skill-tag">Interviews</span><span class="skill-tag">JTBD Framework</span><span class="skill-tag">Target Surveys</span><span class="skill-tag">Persona Mapping</span><span class="skill-tag">Usability Testing</span></div></div>
     <div class="skill-card"><div class="skill-icon">🗺️</div><div class="skill-title">Prioritisation Core</div><div class="skill-tags"><span class="skill-tag">RICE Engine</span><span class="skill-tag">MoSCoW Matrix</span><span class="skill-tag">OKR Tree Syncing</span><span class="skill-tag">Kano Model Grid</span><span class="skill-tag">User Story Mapping</span></div></div>
     <div class="skill-card"><div class="skill-icon">📐</div><div class="skill-title">Interface Verification</div><div class="skill-tags"><span class="skill-tag">Figma Workspace</span><span class="skill-tag">Wireframing</span><span class="skill-tag">Lovable Prototyping</span><span class="skill-tag">UX Choreography</span><span class="skill-tag">Interaction Loops</span></div></div>
     <div class="skill-card"><div class="skill-icon">🤖</div><div class="skill-title">AI Toolstack Scaling</div><div class="skill-tags"><span class="skill-tag">Claude AI Studio</span><span class="skill-tag">ChatGPT Core</span><span class="skill-tag">Lovable App Builder</span><span class="skill-tag">Prompt Crafts</span></div></div>
@@ -288,31 +289,34 @@
   </div>
 </section>
 
-<!-- AIRTRIBE VERIFIED CREDENTIALS CONTAINER HUB -->
+<!-- ENHANCED CREDENTIALS DISPLAY MODULE GRID -->
 <section class="credentials-hub reveal" id="credentials">
   <div class="section-heading">LICENSES & <span>CERTIFICATIONS</span></div>
-  <div class="section-sub">Product management milestones verifying systemic approach training expertise</div>
+  <div class="section-sub">Active product milestones verified on Airtribe platform networks[cite: 2]</div>
   <div class="cert-grid">
+    <!-- Cert 1 -->
     <div class="cert-card">
-      <div class="cert-authority">Airtribe Verified Apprenticeship</div>
-      <div class="cert-name">AI-First Product Management Certification</div>
-      <div class="cert-date">Issued 2026</div>
-      <span class="cert-tag-pill">Generative AI Products</span>
-      <a class="cert-link-btn" href="https://www.airtribe.live" target="_blank">Verify ↗</a>
+      <div class="cert-authority">Airtribe Apprenticeship Program[cite: 2]</div>
+      <div class="cert-name">Product Management Launchpad Credential[cite: 2]</div>
+      <div class="cert-date">Issued Calendar 2026[cite: 2]</div>
+      <span class="cert-tag-pill">End-to-End System Strategy</span>
+      <a class="cert-link-btn" href="https://www.airtribe.live/product-management/certificate/DO5F4NTASLLD" target="_blank">Verify ↗</a>
     </div>
+    <!-- Cert 2 -->
     <div class="cert-card">
-      <div class="cert-authority">Airtribe Product Builder</div>
-      <div class="cert-name">Claude For Product Builders</div>
-      <div class="cert-date">Issued March 2026</div>
-      <span class="cert-tag-pill">Prompt System Architecture</span>
-      <a class="cert-link-btn" href="https://www.airtribe.live" target="_blank">Verify ↗</a>
+      <div class="cert-authority">Airtribe Builders Lab[cite: 2]</div>
+      <div class="cert-name">Claude for Product Builders[cite: 2]</div>
+      <div class="cert-date">Issued March 2026[cite: 2]</div>
+      <span class="cert-tag-pill">Generative AI Operations</span>
+      <a class="cert-link-btn" href="https://www.airtribe.live/workshop/certificate/MJ7YCFC07600" target="_blank">Verify ↗</a>
     </div>
+    <!-- Cert 3 -->
     <div class="cert-card">
-      <div class="cert-authority">Airtribe Growth Lab</div>
-      <div class="cert-name">Quick Prototyping Systems Certification</div>
-      <div class="cert-date">Issued April 2026</div>
-      <span class="cert-tag-pill">Lovable / Rapid MVP Strategy</span>
-      <a class="cert-link-btn" href="https://www.airtribe.live" target="_blank">Verify ↗</a>
+      <div class="cert-authority">Airtribe Growth Lab[cite: 2]</div>
+      <div class="cert-name">Quick Prototyping for Product Builders[cite: 2]</div>
+      <div class="cert-date">Issued April 2026[cite: 2]</div>
+      <span class="cert-tag-pill">Rapid MVPs & Lovable Builds</span>
+      <a class="cert-link-btn" href="https://www.airtribe.live/workshop/certificate/YKIBD2PT8D17" target="_blank">Verify ↗</a>
     </div>
   </div>
 </section>
@@ -320,28 +324,28 @@
 <!-- PROJECTS GRID ENGINES CASE ESSAYS -->
 <section class="projects reveal" id="projects">
   <div class="section-heading">CASE ESSAYS & <span>PROTOTYPES</span></div>
-  <div class="section-sub">Deconstructing user engagement vectors to isolate validated interface conversions</div>
+  <div class="section-sub">Deconstructing user engagement tracks to build validated functional frameworks[cite: 2]</div>
   
   <div class="projects-grid">
     <div class="metrics-dashboard">
-      <div class="dashboard-stat"><div class="dashboard-num">5+ Yrs</div><div class="dashboard-lbl">At Cognizant</div></div>
-      <div class="dashboard-stat"><div class="dashboard-num">62%</div><div class="dashboard-lbl">Fraud Isolated</div></div>
-      <div class="dashboard-stat"><div class="dashboard-num">54</div><div class="dashboard-lbl">Users Surveyed</div></div>
-      <div class="dashboard-stat"><div class="dashboard-num">20%</div><div class="dashboard-lbl">GenAI Uplift</div></div>
+      <div class="dashboard-stat"><div class="dashboard-num">5+ Yrs</div><div class="dashboard-lbl">At Cognizant[cite: 2]</div></div>
+      <div class="dashboard-stat"><div class="dashboard-num">62%</div><div class="dashboard-lbl">Fake Profiles Isolated[cite: 2]</div></div>
+      <div class="dashboard-stat"><div class="dashboard-num">54</div><div class="dashboard-lbl">Users Surveyed[cite: 2]</div></div>
+      <div class="dashboard-stat"><div class="dashboard-num">20%</div><div class="dashboard-lbl">GenAI Uplift[cite: 2]</div></div>
     </div>
 
     <!-- Case Study 1: Shaadi.com -->
     <div class="project-card">
       <div class="featured-badge">⭐ HIGHLIGHT</div>
-      <span class="card-emoji">💍</span><div class="card-tag pink">Trust & Safety Integration</div>
-      <div class="card-title">Shaadi.com – TrustMatch AI Core System</div>
-      <div class="card-desc">Evaluated profile fraud channels across prominent matching configurations to deploy an automated safety layout grid[cite: 1].</div>
+      <span class="card-emoji">💍</span><div class="card-tag pink">Trust & Verification Layer[cite: 2]</div>
+      <div class="card-title">Shaadi.com – TrustMatch AI Core System[cite: 2]</div>
+      <div class="card-desc">Diagnosed platform integrity failures across user configurations to architect a 3-pillar verification layout grid[cite: 2].</div>
       <div class="card-metrics">
-        <div class="metric">Analyzed 2,400+ review trends to isolate a 62% platform safety friction paint point[cite: 1].</div>
-        <div class="metric font-semibold">Architected Progressive Verification tiers using RICE models (Priority Score: 204)[cite: 1].</div>
-        <div class="metric">Delivered complete functional PRD v1.0 and a 6-month phased GTM framework mapping user NPS growth loops[cite: 1].</div>
+        <div class="metric">Analyzed 2,400+ user review datasets to isolate a 62% profile safety pain point[cite: 2].</div>
+        <div class="metric font-semibold">Designed Progressive Verification parameters using RICE framework (Score: 204)[cite: 2].</div>
+        <div class="metric">Authored complete PRD v1.0 and a 6-month phased GTM framework targeting strict customer NPS[cite: 2].</div>
       </div>
-      <div class="card-chips"><span class="chip">RICE Prioritisation</span><span class="chip">PRD Synthesis</span><span class="chip">GTM Strategy Layouts</span></div>
+      <div class="card-chips"><span class="chip">RICE prioritiation</span><span class="chip">PRD Synthesis</span><span class="chip">GTM Strategy Layouts</span></div>
       <div class="card-links"><a class="card-link" href="https://hi-manisha-24.github.io/shaadi-trustmatch/" target="_blank">Launch Live Prototype</a></div>
     </div>
 
@@ -350,11 +354,11 @@
       <div class="featured-badge">UX SANDBOX</div>
       <span class="card-emoji">🕯️</span><div class="card-tag pink">Interactive Interfaces</div>
       <div class="card-title">Candlelit – Interaction Interface Engine</div>
-      <div class="card-desc">Designed and deployed an interactive layout dashboard to test mobile component state balances and transition timings.</div>
+      <div class="card-desc">Designed and deployed an interactive layout dashboard to check mobile responsive component states and micro-actions.</div>
       <div class="card-metrics">
-        <div class="metric">Designed responsive layout viewports for fluid touch interactions.</div>
-        <div class="metric">Reduced interactive pipeline blocks to dropped cart abandonments.</div>
-        <div class="metric">Deployed live front-end architecture testing directly using GitHub Pages.</div>
+        <div class="metric">Built fluid viewport tracking mechanics for clean user layouts.</div>
+        <div class="metric">Optimized checkout configuration elements to drop checkout constraints.</div>
+        <div class="metric">Deployed live web prototype scripts directly using GitHub Pages.</div>
       </div>
       <div class="card-chips"><span class="chip">UX Component Cues</span><span class="chip">Interface Sandbox</span><span class="chip">Live Testing</span></div>
       <div class="card-links"><a class="card-link" href="https://hi-manisha-24.github.io/candlelit/" target="_blank">Launch Interaction Box</a></div>
@@ -363,13 +367,13 @@
     <!-- Case Study 3: Crafto -->
     <div class="project-card">
       <div class="featured-badge">LIVE APP</div>
-      <span class="card-emoji">🎨</span><div class="card-tag pink">Monetisation Strategy</div>
-      <div class="card-title">Crafto – Conversion & Pricing Tier Loops</div>
-      <div class="card-desc">End-to-end monetization metrics study mapping entry-level payment conversions for Tier 2 and Tier 3 Indian user groups[cite: 1].</div>
+      <span class="card-emoji">🎨</span><div class="card-tag pink">Monetisation Strategy[cite: 2]</div>
+      <div class="card-title">Crafto – Conversion & Pricing Tier Loops[cite: 2]</div>
+      <div class="card-desc">End-to-end monetization metrics study mapping premium conversion hooks for distinct Indian regional demographics[cite: 2].</div>
       <div class="card-metrics">
-        <div class="metric">Surveyed 54 targeted consumers to track payment conversion pipeline friction steps[cite: 1].</div>
-        <div class="metric">Leveraged RICE modeling matrices to structure an active micro-tier entry loop starting at ₹49[cite: 1].</div>
-        <div class="metric">Shipped and launched a functional interactive checkout confirmation sequence via Lovable[cite: 1].</div>
+        <div class="metric">Surveyed 54 targeted consumers to track pricing friction loops[cite: 2].</div>
+        <div class="metric">Leveraged RICE matrices to prioritize and isolate a new micro-tier pricing bracket at ₹49[cite: 2].</div>
+        <div class="metric">Shipped and launched a functional interactive prototype workspace via Lovable[cite: 2].</div>
       </div>
       <div class="card-chips"><span class="chip">AARRR Funnel Audits</span><span class="chip">User Surveys</span><span class="chip">Lovable Engine Tools</span></div>
       <div class="card-links"><a class="card-link" href="https://crafto-pm-launchpad-manisha-agarwal.lovable.app/" target="_blank">Launch Live App</a></div>
@@ -377,70 +381,70 @@
 
     <!-- Case Study 4: Uber -->
     <div class="project-card">
-      <span class="card-emoji">🚗</span><div class="card-tag purple">Product Strategy</div>
-      <div class="card-title">Uber Reserve – Booking Certainty Architecture</div>
-      <div class="card-desc">Evaluated systemic fulfillment variables to implement backend protections matching driver confirmations to scheduled trips.</div>
+      <span class="card-emoji">🚗</span><div class="card-tag purple">Product Strategy[cite: 2]</div>
+      <div class="card-title">Uber Reserve – Booking Certainty Architecture[cite: 2]</div>
+      <div class="card-desc">Identified core assurance trust constraints to build design maps resolving assignment locking and trip credit buffers[cite: 2].</div>
       <div class="card-metrics">
-        <div class="metric">Applied meticulous Jobs-To-Be-Done (JTBD) criteria and First Principles analytical logic.</div>
-        <div class="metric">Mapped matching backend trees handling driver allocations and trip delay credit systems.</div>
+        <div class="metric">Applied thorough Jobs-To-Be-Done (JTBD) criteria and First Principles logic[cite: 2].</div>
+        <div class="metric">Mapped matching backend trees handling driver confirmations and delays[cite: 2].</div>
       </div>
       <div class="card-chips"><span class="chip">JTBD Matrix</span><span class="chip">First Principles Logic</span></div>
     </div>
 
     <!-- Case Study 5: Twitter/X -->
     <div class="project-card">
-      <span class="card-emoji">🐦</span><div class="card-tag purple">Growth PM Analysis</div>
-      . <div class="card-title">Twitter/X – Customer Onboarding Optimization</div>
-      <div class="card-desc">Audited product activation metrics to trace and drop user abandonment triggers during initial social channel onboarding[cite: 1].</div>
+      <span class="card-emoji">🐦</span><div class="card-tag purple">Growth PM Analysis[cite: 2]</div>
+      <div class="card-title">Twitter/X – Onboarding Funnel Optimizations[cite: 2]</div>
+      <div class="card-desc">Audited active user onboarding systems to intercept metrics decay drop-off stages[cite: 2].</div>
       <div class="card-metrics">
-        <div class="metric">Isolated a prominent 60% activation loss window tracking to "Empty Feed Syndrome" triggers[cite: 1].</div>
-        <div class="metric">Designed an AI-First Shadow Feed module to lower activation losses down to a projected 30% metric[cite: 1].</div>
+        <div class="metric">Isolated a prominent 60% activation loss window tracking to "Empty Feed Syndrome"[cite: 2].</div>
+        <div class="metric">Proposed AI-powered Shadow Feeds to drop activation loss from 60% to 30%[cite: 2].</div>
       </div>
-      <div class="card-chips"><span class="chip">Funnel Tuning</span><span class="chip">AARRR Analysis</span></div>
+      <div class="card-chips"><span class="chip">Funnel Tuning</span><span class="chip">AARRR Analysis[cite: 2]</span></div>
     </div>
 
     <!-- Case Study 6: Zomato -->
     <div class="project-card">
-      <span class="card-emoji">🍕</span><div class="card-tag purple">Retention Engineering</div>
-      <div class="card-title">Zomato – Cohort Churn Optimization Metrics</div>
-      <div class="card-desc">Deconstructed user cohort trends to model user retention optimizations across standard operational usage windows[cite: 1].</div>
+      <span class="card-emoji">🍕</span><div class="card-tag purple">Retention Engineering[cite: 2]</div>
+      <div class="card-title">Zomato – User Retention Roadmap[cite: 2]</div>
+      <div class="card-desc">Deconstructed customer usage cohorts to balance user retention metrics inside 30-day usage window frames[cite: 2].</div>
       <div class="card-metrics">
-        <div class="metric">Identified root causes behind an 82% Day-30 churn rate to build a 3-phase optimization roadmap[cite: 1].</div>
-        <div class="metric font-semibold">Established North Star targets tracking 4M Weekly Active Orderers[cite: 1].</div>
+        <div class="metric">Isolated root causes behind an 82% Day-30 marketplace drop-off churn loop[cite: 2].</div>
+        <div class="metric font-semibold">Established North Star targets tracking 4M Weekly Active Orderers[cite: 2].</div>
       </div>
-      <div class="card-chips"><span class="chip">Cohort Breakdown</span><span class="chip">OKRs Trees</span><span class="chip">Retention Metrics</span></div>
+      <div class="card-chips"><span class="chip">Cohort Breakdown[cite: 2]</span><span class="chip">OKRs Trees[cite: 2]</span><span class="chip">Retention Metrics</span></div>
     </div>
   </div>
 </section>
 
-<!-- PROFESSIONAL EXPERIENCES TIMELINE CONTAINER -->
+<!-- PROFESSIONAL TIMELINE CONTAINER SECTION -->
 <section class="experience-section reveal" id="experience">
   <div class="section-heading">PROFESSIONAL <span>EXPERIENCE</span></div>
-  <div class="section-sub">Over five years aligning enterprise feature distribution with automated AI workflows</div>
+  <div class="section-sub">Combining five years of client data operations leadership with generative quality evaluations[cite: 2]</div>
   
   <div class="timeline-container">
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="exp-header">
         <div class="exp-title">Senior Process Analyst / Pseudo-Product Owner</div>
-        <div class="exp-duration">2021 — Present</div>
+        <div class="exp-duration">2021 — Present[cite: 2]</div>
       </div>
-      <div class="exp-company">Cognizant Technology Solutions · Remote[cite: 1]</div>
+      <div class="exp-company">Cognizant Technology Solutions · Remote[cite: 2]</div>
       <ul class="exp-bullets">
-        <li>Optimized ad placement click-through conversion behaviors by roughly 15% through precision template setup adjustments, maintaining a 98% strict operational SLA baseline[cite: 1].</li>
-        <li>Enhanced baseline Generative AI output response reliability scores by 20% by authoring data validation evaluation rubrics[cite: 1].</li>
-        <li>Coordinated cross-functional milestones across 4 global client zones to align operational data with AI milestones, trimming feature delivery blockers by 25%[cite: 1].</li>
-        <li>Lowered recurring operational system anomalies by 15% by tracking active evaluation datasets and passing clean product bug tickets to core engineering squads[cite: 1].</li>
-        <li>Accelerated technical squad onboarding performance by 15% by outlining complex edge-cases and centralizing model quality guidelines[cite: 1].</li>
+        <li>Optimized ad click-through conversion behavior metrics by roughly 15% through precision sitelink management, maintaining a 98% strict operational SLA baseline[cite: 2].</li>
+        <li>Enhanced core Generative AI product output response reliability scores by 20% by design and setup of automated framework evaluation rubrics[cite: 2].</li>
+        <li>Coordinated cross-functional milestones across 4 main global client regions as a pseudo-product owner, cutting operational delivery constraints by 25%[cite: 2].</li>
+        <li>Lowered recurring operational model error metrics by 15% by tracking diagnostic quality evaluation parameters and feeding clean action tickets to engineering stakeholders[cite: 2].</li>
+        <li>Accelerated technical squad time-to-productivity onboardings by 15% by documenting system edge-cases and centralizing model response parameters[cite: 2].</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- CONNECTION FORMS LAYOUT PANEL -->
+<!-- CONTACT SECTION FORM -->
 <section class="contact reveal" id="contact">
   <div class="section-heading">CONNECT WITH <span>MANISHA</span></div>
-  <div class="section-sub">Open to APM/PM roles, platform strategy discussions, or prototype design syncs ☕</div>
+  <div class="section-sub">Open to APM/PM roles, strategic collaborations & product coffee conversations ☕</div>
   <div class="contact-cards">
     <a class="contact-card" href="mailto:hiagarwalmanisha@gmail.com">
       <div class="contact-icon">📧</div><div class="contact-label">Email</div><div class="contact-value">hiagarwalmanisha@gmail.com</div>
@@ -462,29 +466,29 @@
       <input class="form-input" type="email" placeholder="Your Email"/>
     </div>
     <input class="form-input" type="text" placeholder="Subject" style="width:100%;margin-bottom:14px;"/>
-    <textarea class="form-textarea" placeholder="Your thoughts — let's track metric trees and scale user conversion pathways together..."></textarea>
+    <textarea class="form-textarea" placeholder="Your message — let's deconstruct metric trees and launch great products together..."></textarea>
     <button class="btn-send" id="sendBtn">Send Message ↗</button>
   </div>
 </section>
 
-<div class="footer">© 2026 Manisha Agarwal · AI-First Product Manager · Handcrafted with logic and intention ✨</div>
+<div class="footer">© 2026 Manisha Agarwal · AI-First Product Manager · Engineered with precision and intention ✨</div>
 
-<!-- DYNAMIC BACKEND INTERACTIONS SCRIPTS ENGINE -->
+<!-- DYNAMIC BACKEND WAVE ENGINE INTERACTIVE CODE SCRIPTS -->
 <script>
   /* 
-     HIGHLY INNOVATIVE INTERACTIVE GEOMETRIC NETWORKS BACKGROUND ENGINE
-     Renders floating data nodes that generate connections magnetically mapping to the visitor's cursor activity.
+     HIGH-INTERACTION FLOATING COSMIC MATRIX CANVAS GENERATOR 
+     Renders floating glowing data clusters that actively link and ripple when moving your pointer around.
   */
-  const canvas = document.getElementById('interactive-mesh-bg');
+  const canvas = document.getElementById('fluid-matrix-bg');
   const ctx = canvas.getContext('2d');
   
   let width = canvas.width = window.innerWidth;
   let height = canvas.height = window.innerHeight;
   
   let points = [];
-  const maxPoints = window.innerWidth < 768 ? 45 : 95;
-  const targetDistance = 110;
-  let mouse = { x: null, y: null, radius: 160 };
+  const maxPoints = window.innerWidth < 768 ? 40 : 100;
+  const targetDistance = 115;
+  let mouse = { x: null, y: null, radius: 170 };
 
   window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
@@ -505,9 +509,9 @@
     constructor() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.35;
-      this.vy = (Math.random() - 0.5) * 0.35;
-      this.radius = Math.random() * 1.5 + 1;
+      this.vx = (Math.random() - 0.5) * 0.4;
+      this.vy = (Math.random() - 0.5) * 0.4;
+      this.radius = Math.random() * 1.8 + 1;
     }
     update() {
       this.x += this.vx;
@@ -515,22 +519,22 @@
       if (this.x < 0 || this.x > width) this.vx *= -1;
       if (this.y < 0 || this.y > height) this.vy *= -1;
       
-      // Mouse Magnetics Logic Attraction Loop
+      // Magnetic interactive loop attraction calculations
       if (mouse.x !== null && mouse.y !== null) {
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
         let dist = Math.sqrt(dx*dx + dy*dy);
         if (dist < mouse.radius) {
           let force = (mouse.radius - dist) / mouse.radius;
-          this.x -= dx * force * 0.02;
-          this.y -= dy * force * 0.02;
+          this.x -= dx * force * 0.025;
+          this.y -= dy * force * 0.025;
         }
       }
     }
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(229, 169, 149, 0.25)';
+      ctx.fillStyle = 'rgba(229, 169, 149, 0.3)';
       ctx.fill();
     }
   }
@@ -539,19 +543,19 @@
     points.push(new Point());
   }
 
-  function animateMesh() {
+  function animateEngine() {
     ctx.clearRect(0, 0, width, height);
     
-    // Ambient Cursor Radial Glow Underlay
+    // Ambient Aurora glow underneath the data clusters
     if (mouse.x !== null && mouse.y !== null) {
-      let radialGlow = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 240);
-      radialGlow.addColorStop(0, 'rgba(229, 169, 149, 0.035)');
+      let radialGlow = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 250);
+      radialGlow.addColorStop(0, 'rgba(229, 169, 149, 0.04)');
       radialGlow.addColorStop(1, 'transparent');
       ctx.fillStyle = radialGlow;
       ctx.fillRect(0, 0, width, height);
     }
 
-    // Connect Lines Calculations Loop
+    // Map constellation pipelines lines
     for (let i = 0; i < points.length; i++) {
       points[i].update();
       points[i].draw();
@@ -565,18 +569,18 @@
           ctx.beginPath();
           ctx.moveTo(points[i].x, points[i].y);
           ctx.lineTo(points[j].x, points[j].y);
-          let alpha = (targetDistance - dist) / targetDistance * 0.12;
+          let alpha = (targetDistance - dist) / targetDistance * 0.14;
           ctx.strokeStyle = `rgba(229, 169, 149, ${alpha})`;
-          ctx.lineWidth = 0.6;
+          ctx.lineWidth = 0.65;
           ctx.stroke();
         }
       }
     }
-    requestAnimationFrame(animateMesh);
+    requestAnimationFrame(animateEngine);
   }
-  animateMesh();
+  animateEngine();
   
-  /* Text Pipeline loop subheaders */
+  /* Text loop configuration subheaders pipeline scripts */
   const roles = ['AI-First Product Manager', 'User Discovery & Analytics Lead', 'RICE Feature Prioritisation Strategist', 'Functional Interface Prototyper'];
   let ri = 0, ci = 0, del = false;
   const el = document.getElementById('typing');
@@ -588,7 +592,7 @@
   }
   type();
   
-  /* Intersection Fade Reveal Monitor Trigger scripts */
+  /* On-Scroll Element Reveal Transitions script calculations */
   function reveal() {
     const reveals = document.querySelectorAll('.reveal');
     reveals.forEach(el => {
@@ -601,9 +605,9 @@
     });
   }
   window.addEventListener('scroll', reveal);
-  reveal();
+  reveal(); // Run validation checklist metrics trigger
   
-  /* Form Click UI state trackers */
+  /* Form messaging user validation scripts click settings */
   document.getElementById('sendBtn').addEventListener('click', function() {
     this.textContent = 'Message Secured! ✨';
     this.style.background = 'linear-gradient(135deg, #2e7d32, #4caf50)';
